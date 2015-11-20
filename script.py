@@ -35,8 +35,6 @@ def main(argv):
     username = str(sys.argv[1])
     # private_key_path = str(sys.argv[2])
 
-    print("here1")
-
     # with SSHTunnelForwarder(
     #     ('ssh.wwbp.org', 22),
     #     ssh_private_key=private_key_path,
@@ -44,8 +42,7 @@ def main(argv):
     #     remote_bind_address=('127.0.0.1', 3308)) as server:
 
     # my code here
-    print("here")
-    cnx = mysql.connector.connect(host='127.0.0.1', port=3306, user='root', db="randomTwitter_by_month")
+    cnx = mysql.connector.connect(host='127.0.0.1', port=3306, user=username, db="randomTwitter_by_month")
 
     cursor = cnx.cursor()
 
