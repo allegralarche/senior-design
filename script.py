@@ -38,6 +38,7 @@ def main(argv):
         exit()
 
     username = str(sys.argv[1])
+    filename = str(sys.argv[2])
 
 
     # my code here
@@ -45,12 +46,17 @@ def main(argv):
     print("connected")
 
     cursor = cnx.cursor()
+
+    #open the file to write to
+    f = open(filename, 'w')
     
     # test
     cursor.execute("SELECT message FROM messages_es_2014_07_country LIMIT 1")
     for (message) in cursor:
         print("Message is : {}".format(message))
 
+    #close file and connection
+    f.close()
 
     print("closing connection...")
     cnx.close()
