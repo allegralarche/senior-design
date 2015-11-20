@@ -9,44 +9,54 @@ import mysql.connector
 import traceback
 import nltk
 import sys
-from sshtunnel import SSHTunnelForwarder
+# from sshtunnel import SSHTunnelForwarder
+# import paramiko
+
 
 '''
 **** USAGE ****
 
-script.py username private_key_file
+First run in command prompt: 
+ssh username@ssh.wwbp.org -i "path_to_private_key" -L 3306:127.0.0.1:3306:3306 -N
+
+Second run in different command prompt:
+script.py username
 
 '''
 
 
 def main(argv):
     username = ''
-    private_key_file = ''
+    # private_key_file = ''
 
-    if len(sys.argv) != 3:
-        exit()
+    # if len(sys.argv) != 3:
+    #     exit()
 
     username = str(sys.argv[1])
-    private_key_path = str(sys.argv[2])
+    # private_key_path = str(sys.argv[2])
 
-    with SSHTunnelForwarder(
-        ('ssh.wwbp.org', 22),
-        ssh_private_key=private_key_path,
-        ssh_username=username,
-        remote_bind_address=('127.0.0.1', 3308)) as server:
+    print("here1")
 
-        # my code here
-        print('here')
-        cnx = mysql.connector.connect(host='127.0.0.1', port=server.local_bind_port, user=username, db="randomTwitter_by_month")
+    # with SSHTunnelForwarder(
+    #     ('ssh.wwbp.org', 22),
+    #     ssh_private_key=private_key_path,
+    #     ssh_username=username,
+    #     remote_bind_address=('127.0.0.1', 3308)) as server:
 
-        cursor = cnx.cursor()
+    # my code here
+    print("here")
+    cnx = mysql.connector.connect(host='127.0.0.1', port=3306, user='root', db="randomTwitter_by_month")
 
-        # test
-        cursor.execute("SELECT message FROM messages_es_2014_07_country LIMIT 1")
+    cursor = cnx.cursor()
 
-        print(cursor)
+    # test
+    cursor.execute("SELECT message FROM messages_es_2014_07_country LIMIT 1")
+    for (message) in cursor:
+        print("Message is : {}".format(message))
 
-        cnx.close()
+    # print(cursor)
+
+    cnx.close()
 
 if __name__ == "__main__":
     main(sys.argv[1:])
