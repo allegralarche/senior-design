@@ -43,6 +43,7 @@ def main(argv):
 
     # my code here
     cnx = mysql.connector.connect(host='127.0.0.1', port=3306, user=username, db="randomTwitter_by_month")
+    print("connected")
 
     cursor = cnx.cursor()
 
@@ -51,8 +52,8 @@ def main(argv):
     for (message) in cursor:
         print("Message is : {}".format(message))
 
-    # print(cursor)
 
+    print("closing connection...")
     cnx.close()
 
 if __name__ == "__main__":
