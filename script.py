@@ -16,6 +16,11 @@ import sys
 '''
 **** USAGE ****
 
+Make sure you do this:
+mysql -u root
+GRANT SELECT ON randomTwitter_by_month.* TO 'username'@'localhost';
+GRANT SELECT ON randomTwitter_by_month.* TO 'username'@'%';
+
 First run in command prompt: 
 ssh username@ssh.wwbp.org -i "path_to_private_key" -L 3306:127.0.0.1:3306:3306 -N
 
@@ -29,23 +34,17 @@ def main(argv):
     username = ''
     # private_key_file = ''
 
-    # if len(sys.argv) != 3:
-    #     exit()
+    if len(sys.argv) != 2:
+        exit()
 
     username = str(sys.argv[1])
-    # private_key_path = str(sys.argv[2])
 
-    # with SSHTunnelForwarder(
-    #     ('ssh.wwbp.org', 22),
-    #     ssh_private_key=private_key_path,
-    #     ssh_username=username,
-    #     remote_bind_address=('127.0.0.1', 3308)) as server:
 
     # my code here
     cnx = mysql.connector.connect(host='127.0.0.1', port=3306, user=username, db="randomTwitter_by_month")
 
     cursor = cnx.cursor()
-
+    
     # test
     cursor.execute("SELECT message FROM messages_es_2014_07_country LIMIT 1")
     for (message) in cursor:
