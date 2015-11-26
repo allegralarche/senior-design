@@ -9,4 +9,4 @@ First run in command prompt:
 ssh username@ssh.wwbp.org -i "path_to_private_key" -L 3306:127.0.0.1:3306:3306 -N
 
 Second run in different command prompt:
-python script.py <username> <path to output file>
+python getSQLfile.py <username> <sql query file> <path to output file>
