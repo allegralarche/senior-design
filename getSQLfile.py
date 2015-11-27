@@ -21,14 +21,15 @@ def main(argv):
     # private_key_file = ''
 
     if len(sys.argv) != 4:
+        print("Usage:> python getSQLfile.py username queryfile.sql outfile.txt")
         exit()
 
     username = str(sys.argv[1])
     queryfile = str(sys.argv[2])
     filename = str(sys.argv[3])
 
-    f = open(queryfile, 'r')
-    query = f.read()
+    qfile = open(queryfile, 'r')
+    query = qfile.read()
 
     # my code here
     cnx = mysql.connector.connect(host='127.0.0.1', port=3306, user=username, db="randomTwitter_by_month")
@@ -42,8 +43,8 @@ def main(argv):
     # test
     cursor.execute(query)
     for message in cursor:
-        #print("Message is : {}".format(message))
-        f.write(str(message)[2:-2])
+        # format and write string
+        f.write(str(message)[3:-3])
         f.write("\n")
 
     # close file and connection
