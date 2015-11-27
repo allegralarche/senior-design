@@ -10,9 +10,10 @@ import sys
 
 
 '''
-**** USAGE ****
 
-In README
+Usage
+
+python getTweetsFromSQL.py <username> <sql query file> <path to output file>
 
 '''
 

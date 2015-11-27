@@ -14,7 +14,7 @@ from nltk.tag.perceptron import PerceptronTagger
 '''
 **** USAGE ****
 
-In README
+python getTaggedFile.py inputfile.txt output.txt
 
 Note: Startup takes a little while
 
