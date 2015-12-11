@@ -1,11 +1,11 @@
 RT/NNP/@fipiciqahuwy/NN/:/:/Alex/NNP/Ferguson/NNP/:/:/Ryan/NNP/Giggs/NNP/should/MD/be/VB/given/VBN/Manchester/NNP/United/NNP/job/NN/full/JJ/time/NN/http://t.co/EnmiOzQpYD/NN/#mufc/NNP/#premierleague/NN/
 Denbury/NNP/Resources/NNP/Inc/NNP/././(/(/DNR/NNP/)/)/price/NN/at/IN/close/RB/,/,/May/NNP/01/CD/,/,/2014/CD/,/,/is/VBZ/16.75/CD/././#followback/NN/
 RT/NNP/@TheWeeknndxo/NN/:/:/Just/RB/because/IN/we/PRP/don't/VBP/talk/VB/doesn't/JJ/mean/NN/I/PRP/don't/VBP/think/VB/about/IN/you/PRP/././I'm/VB/just/RB/trying/VBG/to/TO/distance/VB/myself/PRP/because/IN/I/PRP/know/VBP/I/PRP/can'&#8230;/VBP/
-@HGTribute12/JJ/hahaha/NN/actually/RB/i'd/JJ/drive/NN/you/PRP/NUTS/VBP/!/./
+@HGTribute12/JJ/hahaha/NN/actually/RB/i'd/MD/drive/VB/you/PRP/NUTS/VBP/!/./
 Where/WRB/the/DT/outrage/NN/?/./:/:/If/IN/230/CD/schoolgirls/NNS/were/VBD/abducted/VBN/anywhere/RB/else/RB/,/,/it/PRP/would/MD/be/VB/the/DT/top/JJ/story/NN/././Frida/NNP/Ghitis/NNP/sa/NN/.../:/http://t.co/AQ7XPsrwIt/NN/
 The/DT/state/NN/of/IN/insecurity/NN/in/IN/Nigeria/NNP/is/VBZ/so/RB/high/JJ/and/CC/would/MD/only/RB/get/VB/worse/JJR/if/IN/our/PRP$/government/NN/does/VBZ/not/RB/take/VB/charge/NN/././It's/NNP/just/RB/ridiculous/JJ/!!/NNS/
 @DM4PREZ/RB/carted/VBD/the/DT/shoulder/NN/bag/NN/and/CC/missed/VBN/at/IN/checkout/NN/././Damn/NN/!/./
-If/IN/i/VBN/found/VBD/Bob/NNP/Dylan's/NNP/handwritten/VBD/lyrics/NNS/of/IN/'/''/Like/IN/A/DT/Rolling/NNP/Stone/NNP/'/POS/would/MD/i/VB/fuck/RB/be/VB/selling/VBG/it/PRP/,/,/i'd/VBZ/run/VBN/for/IN/the/DT/hills/NNS/and/CC/keep/VB/it/PRP/to/TO/myself/PRP/././
+If/IN/i/VBN/found/VBD/Bob/NNP/Dylan's/NNP/handwritten/VBD/lyrics/NNS/of/IN/'/''/Like/IN/A/DT/Rolling/NNP/Stone/NNP/'/POS/would/MD/i/VB/fuck/RB/be/VB/selling/VBG/it/PRP/,/,/i'd/MD/run/VB/for/IN/the/DT/hills/NNS/and/CC/keep/VB/it/PRP/to/TO/myself/PRP/././
 @UsernameXav/JJ/haha/NN/I/PRP/left/VBD/there/EX/at/IN/12/CD/&/CC/#128539/NNP/;/:/I/PRP/don't/VBP/have/VBP/classes/NNS/at/IN/this/DT/time/NN/
 @imaginator1dx/VB/what/WP/did/VBD/you/PRP/do/VB/for/IN/your/PRP$/19th/CD/birthday/NN/?/./Lol/NNP/I/PRP/need/VBP/ideas/NNS/&/CC/#128563/NN/;/:/
 New/NNP/Nanoparticle-based/JJ/Surgical/NNP/Adhesive/NNP/#Innovation/NN/May/NNP/Soon/NNP/Replace/NNP/Sutures/NNP/,/,/Staples/NNP/.../:/http://t.co/uIRvxWo6bE/NN/#Technology/NNP/#Medical/JJ/
@@ -155,7 +155,7 @@ RT/NNP/@Saally94/NN/:/:/Literally/RB/have/VBP/abandoned/VBN/everything/NN/to/TO/
 Ugh/NNP/couldn't/NN/figure/NN/out/RP/how/WRB/to/TO/compress/VB/my/PRP$/pics/NNS/on/IN/the/DT/computer/NN/before/IN/I/PRP/left/VBD/for/IN/work/NN/y'all/NN/,/,/says/VBZ/they're/VB/too/RB/big/JJ/to/TO/upload/VB/to/TO/twitter/VB/
 RT/NNP/@KippyKK1/NN/:/:/@Kathleen_Wynne/NN/more/RBR/Liberal/JJ/taxes/NNS/and/CC/lies/NNS/././Imagine/VB/what/WP/it/PRP/would/MD/be/VB/like/IN/if/IN/they/PRP/had/VBD/a/DT/majority/NN/././Throw/VB/them/PRP/out/RP/for/IN/good/JJ/#&/NNP/#8230/NN/;/:/
 I/PRP/wish/VBP/I/PRP/had/VBD/his/PRP$/confidence/NN/
-RT/NNP/@ChippTweetup/NN/:/:/@tweetupbiz/NN/@TweetUpSomerset/VB/having/VBG/talks/NNS/with/IN/@TheBridgeChip/NN/on/IN/wed/NN/to/TO/see/VB/if/IN/we/PRP/can/MD/come/VB/sort/NN/something/NN/out/RP/!/./
+RT/NNP/@ChippTweetup/NN/:/:/@tweetupbiz/NN/@TweetUpSomerset/VB/having/VBG/talks/NNS/with/IN/@TheBridgeChip/NN/on/IN/wed/MD/to/TO/see/VB/if/IN/we/PRP/can/MD/come/VB/sort/NN/something/NN/out/RP/!/./
 TUESDAY/NNP/MAY/NNP/20th/CD/We/PRP/Kick/NNP/Off/NNP/#TakeOffTuesday/VBZ/only/RB/at/IN/DNA/NNP/LEVEL/NNP/C/NNP/NIGHTCLUB/NNP/http://t.co/qbDuSLDSim/NN/
 @2KSupport/NN/can/MD/you/PRP/direct/VB/me/PRP/to/TO/a/DT/webpage/NN/where/WRB/i/NN/can/MD/find/VB/out/RP/the/DT/dif/NN/collector/NN/levels/NNS/and/CC/what/WP/i/VBP/need/VBP/to/TO/get/VB/to/TO/each/DT/level/NN/tks/NN/
 Top/JJ/5/CD/Reasons/NNPS/Why/WRB/You/PRP/Sound/VBP/Crazy/JJ/When/WRB/You/PRP/Denounce/NNP/GMO&/NNP/#8217/NNP/;s/NNP/http://t.co/u9qoCX0xnr/NN/
@@ -246,7 +246,7 @@ New/NNP/video/NN/:/:/Why/WRB/Jedi/NNP/Academy/NNP/Would/NNP/be/VB/an/DT/Awesome/
 RT/NNP/@HeatherDorcas/NN/:/:/I/PRP/didn't/VBP/think/VB/a/DT/book/NN/about/IN/cats/NNS/with/IN/mental/JJ/powers/NNS/could/MD/be/VB/handled/VBN/so/RB/seriously/RB/././I/PRP/was/VBD/wrong/JJ/!/./http://t.co/8JydDLCIQ3/NN/
 @jyrenb/JJ/question/NN/for/IN/you/PRP/do/VBP/have/VB/a/DT/background/NN/playing/NN/fantasy/JJ/rpgs/NN/like/IN/D/NNP/&amp;/NNP/D/NNP/or/CC/Pathfinder/NNP/?/./The/DT/book/NN/seems/VBZ/like/IN/it/PRP/has/VBZ/rpg/VBN/influences/NNS/
 Exile/NNP/v/JJ/Paragons/NNP/of/IN/the/DT/Klaxxi/NNP/Heroic/NNP/25/CD/Man/NNP/Progress/NNP/Attempts/NNP/Thursday/NNP/May/NNP/1/CD/2014/CD/:/:/http://t.co/lhV1T7ZoWM/NN/via/IN/@YouTube/NN/
-It/PRP/will/MD/be/VB/one/CD/of/IN/those/DT/nights/NNS/at/IN/work/NN/I/PRP/look/VBP/around/IN/&/CC/amp/VBP/;/:/think/VB/"/NNP/Damn/NNP/,/,/someone/NN/shoulda/NN/gave/VBD/ur/JJ/parents/NNS/condoms/NNS/"/VBP/
+It/PRP/will/MD/be/VB/one/CD/of/IN/those/DT/nights/NNS/at/IN/work/NN/I/PRP/look/VBP/around/IN/&/CC/amp/VBP/;/:/think/VB/"/NNP/Damn/NNP/,/,/someone/NN/shoulda/MD/gave/VBD/ur/JJ/parents/NNS/condoms/NNS/"/VBP/
 @venessamichelle/JJ/aha/NN/I/PRP/knew/VBD/I/PRP/should/MD/of/IN/just/RB/deleted/VBN/the/DT/post/NN/xD/NN/
 @AJROSSITER1992/JJ/same/JJ/couldn't/NN/cope/NN/!/./
 this/DT/girl/NN/erica/VBZ/parr/NN/'/''/standing/VBG/up/RP/for/IN/her/PRP$/rights/NNS/'/POS/has/VBZ/lost/VBN/the/DT/meaning/NN/of/IN/school/NN/uniform/NN/,/,/if/IN/you/PRP/don't/VBP/like/IN/it/PRP/,/,/leave/VBP/the/DT/college/NN/#LostIt/NN/
@@ -415,7 +415,7 @@ As/IN/Jesus/NNP/said/VBD/,/,/"/VB/It/PRP/is/VBZ/finished/VBN/"/RB/,/,/and/CC/as/
 @1065KIIS/NN/@5SOS/VBZ/What/WP/would/MD/be/VB/your/PRP$/ideal/JJ/pet/NN/and/CC/what/WP/would/MD/it's/VB/name/NN/be/VB/??/VBN/#5SOSKIISTakeover/NNP/:D/NNP/:)/NN/
 Girls/NNP/should/MD/only/RB/have/VB/sex/NN/at/IN/night/NN/because/IN/sperm/NN/falls/VBZ/asleep/JJ/and/CC/they/PRP/can't/VBP/get/VB/pregnant/JJ/././#Smart/VB/
 RT/JJ/@GymForWomen/NNS/:/:/The/DT/d/NN/in/IN/diet/JJ/shouldn't/JJ/stand/NN/for/IN/deprivation/NN/,/,/it/PRP/should/MD/stand/VB/for/IN/decision/NN/././A/DT/good/JJ/diet/NN/is/VBZ/about/IN/making/VBG/good/JJ/decisions/NNS/,/,/n&/JJ/#8230/NN/;/:/
-&/CC/#8220/NNP/;/:/@HunterHayes/NNS/:/:/././@iTunes/NNS/#AskHunterHayes/NNS/Everyday/NNP/is/VBZ/a/DT/story/NN/,/,/write/VB/it/PRP/how/WRB/you'd/JJ/want/VBP/to/TO/tell/VB/it/PRP/!/./&/CC/#8221/NNP/;/:/Okay/NNP/this/DT/was/VBD/a/DT/good/JJ/one/CD/I'll/NNP/let/VB/it/PRP/pass/VB/
+&/CC/#8220/NNP/;/:/@HunterHayes/NNS/:/:/././@iTunes/NNS/#AskHunterHayes/NNS/Everyday/NNP/is/VBZ/a/DT/story/NN/,/,/write/VB/it/PRP/how/WRB/you'd/MD/want/VB/to/TO/tell/VB/it/PRP/!/./&/CC/#8221/NNP/;/:/Okay/NNP/this/DT/was/VBD/a/DT/good/JJ/one/CD/I'll/NNP/let/VB/it/PRP/pass/VB/
 I/PRP/want/VBP/to/TO/jump/VB/in/IN/the/DT/fountain/NN/././#cali/CC/#downtown/JJ/#losangeles/NNS/#moments/NNS/#sun/VBP/#may/JJ/#2014/NNP/#blackandwhite/NNP/&/CC/#8230/NNP/;/:/http://t.co/8neS60hk9z/NN/
 Did/NNP/you/PRP/know/VBP/that/DT/updates/VBZ/to/TO/the/DT/Industrial/NNP/Tech/NNP/and/CC/engineering/NN/spaces/NNS/are/VBP/part/NN/of/IN/the/DT/May/NNP/20th/CD/referendum/NN/?.../CD/http://t.co/vxysdMLM4y/NN/
 i'm/NN/now/RB/finding/VBG/out/RP/that/IN/jeremy/NN/sends/VBZ/snapchats/NNS/of/IN/me/PRP/to/TO/more/RBR/people/NNS/than/IN/i/JJ/thought/NN/and/CC/I'm/NNP/not/RB/sure/JJ/how/WRB/i/JJ/feel/VBP/about/IN/that/DT/././
@@ -425,7 +425,7 @@ RT/NNP/@moneygalJ/NN/:/:/Never/RB/tell/VBP/a/DT/bitch/NN/you/PRP/deepest/VBP/sec
 A/DT/kid/NN/at/IN/work/NN/thought/NN/I/PRP/was/VBD/45/CD/with/IN/a/DT/husband/NN/and/CC/kids/NNS/././Ouch/NNP/././
 Birthday/NNP/being/VBG/on/IN/the/DT/final/JJ/day/NN/of/IN/the/DT/season/NN/should/MD/mean/VB/sneaking/VBG/into/IN/2nd/CD/and/CC/a/DT/promotion/NN/party/NN/././Didn't/NNP/have/VBP/a/DT/battle/NN/for/IN/11th/CD/in/IN/mind/NN/.../:/
 +380637619434/NN/It/PRP/would/MD/be/VB/pleasure/JJ/"/JJ/@JaredLeto/NN/:/:/\xa0&/JJ/#1071/NNP/;/:/&/CC/#1093/NNP/;/:/&/CC/#1086/NNP/;/:/&/CC/#1095/NNP/;/:/&/CC/#1091/NNP/;/:/&/CC/#1086/NNP/;/:/&/CC/#1090/NNP/;/:/&/CC/#1087/NNP/;/:/&/CC/#1088/NNP/;/:/&/CC/#1072/NNP/;/:/&/CC/#1074/NNP/;/:/&/CC/#1080/NNP/;/:/&/CC/#1090/NNP/;/:/&/CC/#1100/NNP/;/:/&/CC/#1074/NNP/;/:/&/CC/#1072/NNP/;/:/&/CC/#1084/NNP/;/:/&/CC/#1089/NNP/;/:/&/CC/#1084/NNP/;/:/&/CC/#1089/NNP/;/:/././&/CC/#1053/NNP/;/:/&/CC/#1077/NNP/;/:/&/CC/#1086/NNP/;/:/&/CC/#1089/NNP/;/:/&/CC/#1090/NNP/;/:/&/CC/#1072/NNP/;/:/&/CC/#1074/NNP/;/:/&/CC/#1080/NNP/;/:/&/CC/#1090/NNP/;/:/&/CC/#1077/NNP/;/:/&/CC/#1084/NNP/;/:/&/CC/#1085/NNP/;/:/&/CC/#1077/NNP/;/:/&/CC/#1089/NNP/;/:/&/CC/#1074/NNP/;/:/&/CC/#1086/NNP/;/:/&/CC/#1080/NNP/;/:/&/CC/#1085/NNP/;/:/&/CC/#1086/NNP/;/:/&/CC/#1084/NNP/;/:/&/CC/#1077/NNP/;/:/&/CC/#1088/NNP/;/:/&/CC/#1072/NN/;/:/?/./http://t.co/sCxnf7HTYv/NN/"/NN/
-@ArianaGrande/RB/good/JJ/for/IN/you/PRP/!/./&/CC/#128513/NNP/;/:/it/PRP/would/MD/be/VB/nice/JJ/if/IN/you'd/JJ/follow/VBP/me/PRP/././But/CC/I/PRP/guess/VBP/that/IN/won't/NN/happen/VB/././Dream/NN/over/IN/././
+@ArianaGrande/RB/good/JJ/for/IN/you/PRP/!/./&/CC/#128513/NNP/;/:/it/PRP/would/MD/be/VB/nice/JJ/if/IN/you'd/MD/follow/VB/me/PRP/././But/CC/I/PRP/guess/VBP/that/IN/won't/NN/happen/VB/././Dream/NN/over/IN/././
 RT/NNP/@acastillolll/NN/:/:/@ScubaSt3v322/NN/not/RB/going/VBG/to/TO/wish/VB/you/PRP/one/CD/either/DT/././Consider/VB/this/DT/my/PRP$/scumbag/NN/card/NN/././
 @sugarfreeCV/NN/hey/NN/man/NN/wanted/VBD/to/TO/wish/VB/you/PRP/a/DT/happy/JJ/birthday/NN/also/RB/since/IN/@kmthomp29/NNP/said/VBD/youre/NN/the/DT/bomb/NN/
 listening/VBG/to/TO/The/DT/Smiths/NNP/on/IN/a/DT/Thursday/NNP/just/RB/makes/VBZ/me/PRP/wish/JJ/I/PRP/was/VBD/at/IN/Rebel/NNP/
@@ -487,7 +487,7 @@ So/RB/HALFY/NNP/,/,/you/PRP/think/VBP/@klr_ugly/RB/is/VBZ/a/DT/#DUMBCUNT/NN/.../
 @DarnellMayberry/NNS/make/VBP/sure/JJ/to/TO/tell/VB/KD/NNP/to/TO/post/VB/up/RP/when/WRB/Allens/NNS/on/IN/him/PRP/././
 @festinagirl/NN/don't/NN/allow/VB/BNP/NNP/members/NNS/,/,/that/WDT/would/MD/be/VB/true/JJ/if/IN/it/PRP/wasn't/VBD/false/JJ/
 RT/JJ/@serahfarrons/NNS/:/:/@oerbayunjen/NN/kojuro/NN/would/MD/know/VB/about/IN/that/DT/
-Lmao/NNP/woulda/VBD/been/VBN/mad/JJ/af/NN/
+Lmao/NNP/woulda/MD/been/VBN/mad/JJ/af/NN/
 You/PRP/don't/VBP/want/VB/no/DT/problems/NNS/on/IN/some/DT/math/NN/class/NN/shit/NN/!/./
 I/PRP/don't/VBP/beleive/VB/a/DT/word/NN/of/IN/what/WP/you/PRP/are/VBP/saying/VBG/,/,/not/RB/a/DT/word/NN/././
 I/PRP/don't/VBP/want/VB/to/TO/get/VB/attached/VBN/to/TO/anyone/NN/anymore/RB/././It/PRP/only/RB/destroys/VBZ/me/PRP/in/IN/the/DT/end/NN/././
@@ -528,7 +528,7 @@ What/WP/if/IN/@snapchat/DT/made/VBD/it/PRP/to/TO/where/WRB/you/PRP/could/MD/twee
 RT/NNP/@MotherNallive/NN/:/:/Had/VBD/a/DT/hard/JJ/day/NN/today/NN/did/VBD/some/DT/meditation/NN/went/VBD/running/VBG/and/CC/I/PRP/think/VBP/maybe/RB/I'm/NNP/starting/VBG/to/TO/feel/VB/better/RB/
 I/PRP/forgot/VBD/to/TO/tweet/VB/!/./I/PRP/am/VBP/now/RB/broadcasting/VBG/live/VBP/on/IN/Flirt4Free/NNP/!/./Come/NNP/along/IN/this/DT/1st/CD/May/NNP/,/,/to/TO/dance/VB/around/IN/my/PRP$/maypole/NN/!/./http://t.co/gUuVn3XLJq/NN/
 I/PRP/liked/VBD/a/DT/@YouTube/JJ/video/NN/from/IN/@dexterjmanning/VBG/http://t.co/mg6trubzcI/JJ/Dexplay/NN/:/:/Ep/NNP/././99/CD/Sonic's/NNP/life/NN/story/NN/(/(/Sonic/NNP/Generations/NNP/)/)/
-Don/NNP/Jon/NNP/,/,/safety/NN/not/RB/guaranteed/VBN/,/,/cash/NN/back/RB/,/,/Jeff/NNP/who/WP/lives/VBZ/at/IN/home/NN/,/,/adventure/NN/land/NN/well/RB/written/VBN/movies/NNS/you'd/VBP/probably/RB/think/VBP/are/VBP/boring/VBG/
+Don/NNP/Jon/NNP/,/,/safety/NN/not/RB/guaranteed/VBN/,/,/cash/NN/back/RB/,/,/Jeff/NNP/who/WP/lives/VBZ/at/IN/home/NN/,/,/adventure/NN/land/NN/well/RB/written/VBN/movies/NNS/you'd/MD/probably/RB/think/VB/are/VBP/boring/VBG/
 I/PRP/love/VBP/#fitness/RB/,/,/so/IN/I/PRP/decided/VBD/2/CD/share/NN/my/PRP$/love/NN/w/IN/the/DT/world/NN/&/CC/amp/NN/;/:/make/VB/extra/JJ/money/NN/doing/VBG/it/PRP/././msg/VB/me/PRP/4/CD/details/NNS/http://t.co/gyfKPH62pc/VBD/#2ndincome/NN/
 I'll/NNP/bet/NN/@timfarron/NNP/would/MD/be/VB/the/DT/first/JJ/to/TO/oppose/VB/house/NN/building/NN/in/IN/the/DT/lakes/NNS/././#hypocrite/JJ/#bbcqt/NN/
 #WeNeedDiverseBooks/NNS/because/IN/I/PRP/shouldn't/VBP/have/VBP/to/TO/put/VB/up/RP/with/IN/strangers/NNS/asking/VBG/what/WP/I/PRP/need/VBP/a/DT/wheelchair/NN/for/IN/before/IN/they/PRP/ask/VBP/what/WP/my/PRP$/name/NN/is/VBZ/././
@@ -585,16 +585,16 @@ Heheh/NNP/I/PRP/haven't/VBP/missed/VBD/one/CD/../NN/I/PRP/didn't/VBP/go/VB/see/V
 If/IN/we/PRP/taxed/VBP/Tories/NNPS/saying/VBG/'/''/it's/NN/all/DT/Labours/NNP/fault/NN/'/''/all/PDT/the/DT/time/NN/we/PRP/would/MD/have/VB/the/DT/deficit/NN/cleared/VBD/up/RP/in/IN/no/DT/time/NN/#bbcqt/VB/
 @DirtyBayAnt/NN/and/CC/he/PRP/doesn't/VBZ/yodel/CC/I/PRP/don't/VBP/even/RB/know/VB/how/WRB/Trey/NNP/Songz/NNP/got/VBD/a/DT/career/NN/
 RT/NNP/@vancouverswift/NN/:/:/Taylor's/NNP/online/NN/again/RB/././I/PRP/don't/VBP/know/VB/if/IN/I/PRP/should/MD/try/VB/or/CC/sit/VB/here/RB/and/CC/contemplate/VB/what/WP/people/NNS/might/MD/think/VB/of/IN/me/PRP/spamming/VBG/&/CC/#8230/NNP/;/:/
-RT/NNP/@FeministaJones/NNS/:/:/If/IN/234/CD/White/NNP/girls/NNS/from/IN/the/DT/UK/NNP/were/VBD/kidnapped/VBN/,/,/we'd/NNS/know/VBP/their/PRP$/names/NNS/,/,/favorite/JJ/subjects/NNS/in/IN/school/NN/,/,/hobbies/NNS/,/,/and/CC/there'd&#8230;/NN/
+RT/NNP/@FeministaJones/NNS/:/:/If/IN/234/CD/White/NNP/girls/NNS/from/IN/the/DT/UK/NNP/were/VBD/kidnapped/VBN/,/,/we'd/MD/know/VB/their/PRP$/names/NNS/,/,/favorite/JJ/subjects/NNS/in/IN/school/NN/,/,/hobbies/NNS/,/,/and/CC/there'd&#8230;/NN/
 @Ginofantastico/NNS/such/PDT/a/DT/dirty/JJ/mind/NN/!/./Who/NNP/would/MD/of/IN/thought/NN/#celebrityjuice/NN/
 RT/NNP/@Nick_White03/NN/:/:/"/NN/If/IN/you/PRP/haven\'t/VBP/praised/VBN/God/NNP/today/NN/;/:/you\'ve/CC/been/VBN/running/VBG/on/IN/4/CD/cylinders/NNS/when/WRB/you/PRP/could/MD/be/VB/running/VBG/on/IN/8/CD/!/./"/NN/\n\n/NNP/--/:/Pastor/NNP/Jeff/NNP/Fu&/NNP/#8230/NNP/;/:/
 That/DT/whole/NN/would/MD/u/VB/slap/JJ/yo/NNS/mom/NN/for/IN/5/CD/billion/CD/&/CC/#128529/NNP/;/:/on/IN/gah/NN/my/PRP$/mom/NN/would/MD/catch/VB/my/PRP$/hand/NN/mid/NN/slap/NN/and/CC/knock/VB/my/PRP$/ass/NN/out/RP/
 RT/NNP/@AthenaMystique/NN/:/:/I'm/NNP/drunk/NN/and/CC/shouldn't/JJ/drive/NN/home/NN/././Let's/NNP/just/RB/have/VBP/sex/NN/in/IN/the/DT/alley/NN/instead/RB/././\n\n/VB/#goodplan/NN/
 imma/JJ/cool/JJ/ass/NN/bitch/NN/&/CC/amp/NN/;/:/know/VB/when/WRB/shit/NN/hit/VBD/the/DT/fan/NN/I/PRP/don't/VBP/fold/JJ/under/IN/pressure/NN/
-If/IN/I/PRP/had/VBD/a/DT/Zac/NNP/Efron/NNP/to/TO/sing/VBG/to/TO/me/PRP/every/DT/time/NN/we/PRP/fought/VBD/,/,/id/VB/actually/RB/enjoy/JJ/relationships/NNS/
+If/IN/I/PRP/had/VBD/a/DT/Zac/NNP/Efron/NNP/to/TO/sing/VBG/to/TO/me/PRP/every/DT/time/NN/we/PRP/fought/VBD/,/,/id/MD/actually/RB/enjoy/VB/relationships/NNS/
 I/PRP/love/VBP/it/PRP/how/WRB/my/PRP$/whole/JJ/family/NN/talk/NN/to/TO/my/PRP$/Gerbils/NNP/as/IN/if/IN/they/PRP/understand/VBP/:\/NNP/'/POS/)/)/I/PRP/think/VBP/if/IN/they/PRP/could/MD/talk/VB/,/,/they\'d/RB/be/VB/like/IN/"/NNP/BITCH/NNP/,/,/STFU/NNP/!!/NNP/"/NNP/:\/NNP/'/POS/)/)/
 RT/NNP/@TaraNipe/NN/:/:/#MayDay's/VB/your/PRP$/chance/NN/to/TO/show/VB/your/PRP$/support/NN/of/IN/#AusUnions/NNS/;/:/in/IN/strength/NN/there's/NN/unity/NN/and/CC/there/EX/are/VBP/marches/NNS/across/IN/Aus/NNP/this/DT/Sun&/NNP/#8230/NN/;/:/
-@mbhnyc/RB/great/JJ/meeting/NN/up/RP/at/IN/RailsConf/NNP/-/:/shoot/NN/me/PRP/an/DT/email/NN/if/IN/you'd/NNS/like/IN/to/TO/talk/VB/more/JJR/about/IN/Constant/JJ/Contact/NN/in/IN/NYC/NNP/brunk@constantcontact.com/NN/
+@mbhnyc/RB/great/JJ/meeting/NN/up/RP/at/IN/RailsConf/NNP/-/:/shoot/NN/me/PRP/an/DT/email/NN/if/IN/you'd/MD/like/VB/to/TO/talk/VB/more/JJR/about/IN/Constant/JJ/Contact/NN/in/IN/NYC/NNP/brunk@constantcontact.com/NN/
 RT/NNP/@proncis/NN/:/:/If/IN/all/DT/coffee/NN/shops/NNS/played/VBD/metal/NN/or/CC/hip/NN/hop/NN/,/,/I/PRP/think/VBP/the/DT/world/NN/would/MD/be/VB/a/DT/better/JJR/place/NN/././
 @MystreHyde/JJ/No/NNP/,/,/please/VB/don't/NN/././I'll/NNP/have/VBP/to/TO/hunt/VB/you/PRP/down/RP/and/CC/drag/VB/you/PRP/out/RP/././&/CC/#128584/NNP/;/:/&/CC/#128584/NNP/;/:/&/CC/#128584/CD/;/:/
 Since/IN/it/PRP/was/VBD/too/RB/late/JJ/to/TO/post/VB/the/DT/other/JJ/one/CD/.../:/\n\nIt's/PRP/already/RB/May/NNP/././http://t.co/nPHMHYSj8W/NN/
@@ -663,7 +663,7 @@ The/DT/worst/JJS/feeling/NN/is/VBZ/pretending/VBG/you/PRP/don't/VBP/care/VB/abou
 @CodybJohns/NNS/Pittsburgh/NNP/might/MD/have/VB/been/VBN/late/JJ/to/TO/the/DT/vine/JJ/game/NN/but/CC/we/PRP/got/VBD/a/DT/couple/JJ/steel/NN/city/NN/viners/NNS/!/./Might/NNP/see/VBP/uh/JJ/there/RB/!/./
 May/NNP/1st/CD/:/:/#Selfie/NN/#MayPhotoChallenge\n\nI'll/MD/do/VB/it/PRP/this/DT/month/NN/././I/PRP/never/RB/post/NN/selfies/NNS/but/CC/I'm/NNP/actually/RB/okay&/VBZ/#8230/NN/;/:/http://t.co/NjhvOYv3sZ/NN/
 Does/VBZ/he/PRP/wear/VB/it/PRP/?/./lol\n\nRT/JJ/@JulieSupple/NN/:/:/\n/JJ/@TonyMichael/NN/I/PRP/bought/VBD/one/CD/for/IN/my/PRP$/hubby/NN/;)/NNP/\n\n/NNP/http://t.co/eUfd00PaoF/NN/
-@GuildfordFringe/NN/next/JJ/wed/NN/--/:/which/WDT/pub/NN/?/./which/WDT/musical/JJ/?/./
+@GuildfordFringe/NN/next/JJ/wed/MD/--/:/which/WDT/pub/NN/?/./which/WDT/musical/JJ/?/./
 My/PRP$/goals/NNS/for/IN/May/NNP/!/./I/PRP/wanted/VBD/to/TO/get/VB/back/RB/into/IN/the/DT/swing/NN/of/IN/one/CD/thing/NN/and/CC/work/NN/on/IN/some/DT/others/NNS/!/./http://t.co/6K16Kg45uK/NN/
 I've/NNP/gathered/VBD/7/CD/Scrolls/NNS/!/./Can/MD/you/PRP/do/VB/better/JJR/?/./Download/NNP/to/TO/find/VB/it/PRP/out/RP/!/./http://t.co/FkzekyY8UR/NN/#iphone/NN/,/,/#iphonegames/NNS/,/,/#gameinsight/VBD/
 @ITS12GAUGEBITCH/JJ/yup/NN/should/MD/be/VB/in/IN/around/IN/8/CD/
@@ -777,7 +777,7 @@ RT/NNP/@MAWitherspoonJr/NN/:/:/@TVietor08/VB/The/DT/fact/NN/that/IN/you/PRP/used
 RT/NNP/@JoshCohen1063/NN/:/:/SUNFEST/JJ/DAY/NNP/TWO/NNP/:/:/As/IN/Official/NNP/Unofficial/NNP/Mayor/NNP/of/IN/#SunFest14/NNP/I/PRP/implore/VBP/you/PRP/to/TO/get/VB/here/RB/tonight/NN/././I/PRP/will/MD/address/VB/you/PRP/all/DT/on&/VBP/#8230/NNS/;/:/
 Divergent/NNP/was/VBD/average/JJ/at/IN/best/JJS/,/,/but/CC/it/PRP/would/MD/have/VB/been/VBN/better/JJR/if/IN/they/PRP/had/VBD/bothered/VBN/to/TO/follow/VB/the/DT/book/NN/!/./
 Photo/NN/:/:/asjkasjk-csm/JJ/:/:/blindedbythoughts/NNS/:/:/felicianicoley/NN/:/:/bongrips-n-chips/NNS/:/:/wreckfull/NN/:/:/simplicitayy/NN/:/:/.../:/http://t.co/EUXHMafPLm/NN/
-@pL_Sporley/NN/didn't/NN/see/VB/her/PRP$/for/IN/rest/NN/of/IN/the/DT/weekend/NN/,/,/woulda/NN/'/POS/had/VBD/to/TO/take/VB/her/PRP$/back/NN/to/TO/my/PRP$/tent/NN/
+@pL_Sporley/NN/didn't/NN/see/VB/her/PRP$/for/IN/rest/NN/of/IN/the/DT/weekend/NN/,/,/woulda/MD/'/POS/had/VBD/to/TO/take/VB/her/PRP$/back/NN/to/TO/my/PRP$/tent/NN/
 I/PRP/dig/VBP/the/DT/new/JJ/snapchat/NN/
 Eurovision/NN/will/MD/literally/RB/save/VB/me/PRP/from/IN/sanity/NN/././Screw/NNP/Exams/NNP/,/,/Eurovision/NNP/is/VBZ/what/WP/I/PRP/live/VBP/for/IN/.../:/#10thMay/NN/
 RT/NNP/@jazkda/NN/:/:/Indigenous/JJ/Health/NNP/and/CC/Foreign/NNP/Aid/NNP/are/VBP/different/JJ/,/,/both/DT/need/VBP/adequate/JJ/funding/NN/and/CC/support/NN/././We/PRP/shouldn't/VBP/have/VB/to/TO/choose/prioritise&/VB/#8230/NN/;/:/
@@ -865,7 +865,7 @@ RT/NNP/@JacksGapSource/NN/:/:/I/PRP/don't/VBP/know/VB/how/WRB/to/TO/express/VB/m
 I/PRP/wish/VBP/I/PRP/knew/VBD/what/WP/was/VBD/going/VBG/on/IN/with/IN/my/PRP$/disappearing/NN/tiles/NNS/././#gamedev/VB/#indiedev/JJ/#nzgamdev/NN/
 @Luke5SOS/NN/&/CC/#128044/NNP/;/:/&/CC/#128039/NNP/;/:/&/CC/#128044/NNP/;/:/&/CC/#128039/NNP/;/:/&/CC/#128044/NNP/;/:/&/CC/#128039/NNP/;/:/&/CC/#128044/NNP/;/:/&/CC/#128039/NNP/;/:/&/CC/#128044/NNP/;/:/Luke/NNP/Hemmings/NNP/from/IN/5SOS/CD/Hi/NNP/sunshine/NN/,/,/please/VB/follow/VB/me/PRP/it/PRP/would/MD/mean/VB/the/DT/world/NN/to/TO/me/PRP/&/CC/#128532/NNP/;/:/&/CC/#128150/NNP/;/:/&/CC/#127829/NNP/;/:/&/CC/#128044/NNP/;/:/&/CC/#128039/NNP/;/:/&/CC/#128044/NNP/;/:/&/CC/#128039/NNP/;/:/&/CC/#128044/NNP/;/:/&/CC/#128039/NNP/;/:/&/CC/#128044/NNP/;/:/&/CC/#128039/NNP/;/:/&/CC/#128044/NNP/;/:/x115/NN/
 RT/NNP/@Giirl_SheBoojie/NN/:/:/Some/DT/bitches/NNS/are/VBP/against/IN/child/JJ/support/NN/././Kmsl/VB/!/./You/PRP/dumb/VBP/&/CC/#128514/VBP/;/:/I'm/NNP/all/DT/for/IN/voluntary/JJ/or/CC/involuntary/JJ/either/DT/way/NN/something/NN/wil&/JJ/#8230/NN/;/:/
-@AustinNix123/JJ/@samanthaash1993/NNP/It's/NNP/3/CD/bucks/NNS/././If/IN/you'd/RB/rather/RB/not/RB/spend/VB/that/IN/,/,/use/VB/Twitterrific/NNP/././
+@AustinNix123/JJ/@samanthaash1993/NNP/It's/NNP/3/CD/bucks/NNS/././If/IN/you'd/MD/rather/RB/not/RB/spend/VB/that/IN/,/,/use/VB/Twitterrific/NNP/././
 "/VB/What/WP/you/PRP/saying/VBG/Oh/UH/to/TO/,/,/Brandon/NNP/?/./"/NNP/*/NNP/Hands/NNP/me/PRP/the/DT/printed/VBN/out/RP/tweet/NN/*/NN/././Couldn\'t/NNP/believe/VBP/it/PRP/././
 RT/NNP/@MannyTreo/NN/:/:/This/DT/is/VBZ/My/NNP/Last/JJ/Party/NNP/#OhYouFancy/NN/I/PRP/was/VBD/going/VBG/to/TO/announce/VB/it/PRP/at/IN/the/DT/party/NN/but/CC/everyone/NN/should/MD/know/VB/Now/RB/
 RT/JJ/@seattlish/NN/:/:/Today's/JJ/theme/NN/song/NN/brought/VBD/to/TO/you/PRP/by/IN/@thelonelyforest/JJS/because/IN/no/DT/doy/NN/:/:/http://t.co/MaAjWZSOiB/NN/#SrslyGoOutside/NN/
@@ -880,7 +880,7 @@ RT/JJ/@ImAngelaPowers/NNS/:/:/Don't/NNP/complain/VB/about/IN/your/PRP$/body/NN/,
 If/IN/you/PRP/don't/VBP/fight/VB/for/IN/what/WP/you/PRP/want/VBP/,/,/don't/VBP/cry/NN/for/IN/what/WP/you/PRP/lost/VBD/../PRP/x/NN/
 RT/NNP/@kathryn_clarke/NN/:/:/A/DT/lovely/JJ/morning/NN/chatting/VBG/to/TO/the/DT/ladies/NNS/@FACTCancer/VBP/discussing/VBG/what/WP/our/PRP$/clothes/NNS/would/MD/say/VB/if/IN/they/PRP/could/MD/talk/VB/!/./Thanks/NNP/fo&/JJ/#8230/NN/;/:/
 Movers/NNS/Update/VBP/:/:/May/NNP/03/CD/,/,/2014/CD/:/:/Keys/NNS/to/TO/the/DT/Cure/NNP/&/CC/amp/NN/;/:/The/DT/Art/NNP/of/IN/Science/NNP/:/:/Under/IN/the/DT/Surface/NNP/http://t.co/j8PmA5PCZm/NN/$199/NNP/Mover/NNP/615-9889/JJ/
-They/PRP/so/RB/nice/JJ/on/IN/Maury/NNP/,/,/I/PRP/woulda/VBP/be/VB/like/IN/bitch/NN/,/,/u/JJ/ass/NN/,/,/and/CC/all/PDT/that/DT/shit&/JJ/#128514/NN/;/:/
+They/PRP/so/RB/nice/JJ/on/IN/Maury/NNP/,/,/I/PRP/woulda/MD/be/VB/like/IN/bitch/NN/,/,/u/JJ/ass/NN/,/,/and/CC/all/PDT/that/DT/shit&/JJ/#128514/NN/;/:/
 @brokencup/NN/@changepat/NNP/@edshow/NNP/Very/NNP/true/JJ/it/PRP/would/MD/be/VB/crazy/JJ/not/RB/to/TO/vote/VB/
 06/CD/Devil/NNP/May/NNP/Cry/NNP/is/VBZ/on/IN/http://t.co/uV4u9sXGvK/NN/
 S/O/NN/to/TO/my/PRP$/WakeUpNow/NNP/monster/NN/@Mulrooney93/NNP/!!/VBZ/We/PRP/doing/VBG/it/PRP/big/JJ/this/DT/year/NN/!/./
@@ -919,7 +919,7 @@ Alice/NNP/Nine/NNP/SEVEN/NNP/PV/NNP/is/VBZ/going/VBG/to/TO/be/VB/released/VBN/on
 RT/NNP/@VampireBram_/NN/:/:/rt/NN/for/IN/15/CD/free/JJ/follows/VBZ/:D/JJ/\nfree/NNP/but/CC/a/DT/follow/NN/would/MD/be\nnice/VB/since/IN/I'm/NNP/doing\neveryone/NN/
 Shoutout/NN/to/TO/study/VB/room/NN/420/CD/in/IN/North/NNP/Hall/NNP/,/,/where/WRB/I've/NNP/been/VBN/studying/VBG/all/DT/semester/NN/././This/DT/should/MD/be/VB/my/PRP$/last/JJ/night/NN/checking/VBG/it/PRP/out/RP/!/./
 RT/NNP/@FitnessGov/NN/:/:/It&/NNP/#8217/NNP/;s/NNP/Fitness/NNP/&/CC/amp/NN/;/:/Sports/NNP/Month/NNP/!/./Check/VB/out/RP/this/DT/toolkit/NN/for/IN/ways/NNS/to/TO/#MoveInMay/VB/:/:/http://t.co/lmHjlAHgPr/NN/././#LetsMove/VB/http://t.co/&#8230/NN/;/:/
-@nataliejeanette/NN/i'd/NN/rather/RB/work/NN/in/IN/retail/JJ/than/IN/work/NN/in/IN/food/NN/&/CC/#128581/NN/;/:/
+@nataliejeanette/NN/i'd/MD/rather/RB/work/VB/in/IN/retail/JJ/than/IN/work/NN/in/IN/food/NN/&/CC/#128581/NN/;/:/
 Maybe/RB/it's/RB/too/RB/late/JJ/for/IN/there/EX/to/TO/be/VB/anything/NN/special/JJ/between/IN/us/PRP/&/CC/#128532/NNP/;/:/
 So/RB/good/JJ/.../:/Flaws/NNP/Only/RB/A/NNP/Protagonist/NNP/Could/NNP/Have/NNP/http://t.co/s83xbbkb10/VBN/via/IN/@TheToast/NN/
 All/DT/you/PRP/girls/NNS/should/MD/have/VB/a/DT/lesbian/JJ/experience/NN/sometime/RB/in/IN/your/PRP$/life/NN/././Preferably/RB/with/IN/me/PRP/and/CC/a/DT/racially/RB/ambiguous/JJ/chick/NN/
