@@ -113,7 +113,7 @@ I/PRP/could/MD/make/VB/it/PRP/as/IN/a/DT/goalkeeper/NN/
 Ugh/NNP/couldn't/NN/figure/NN/out/RP/how/WRB/to/TO/compress/VB/my/PRP$/pics/NNS/on/IN/the/DT/computer/NN/before/IN/I/PRP/left/VBD/for/IN/work/NN/y'all/NN/,/,/says/VBZ/they're/VB/too/RB/big/JJ/to/TO/upload/VB/to/TO/twitter/VB/
 RT/NNP/@KippyKK1/NN/:/:/@Kathleen_Wynne/NN/more/RBR/Liberal/JJ/taxes/NNS/and/CC/lies/NNS/././Imagine/VB/what/WP/it/PRP/would/MD/be/VB/like/IN/if/IN/they/PRP/had/VBD/a/DT/majority/NN/././Throw/VB/them/PRP/out/RP/for/IN/good/JJ/#&/NNP/#8230/NN/;/:/
 I/PRP/wish/VBP/I/PRP/had/VBD/his/PRP$/confidence/NN/
-RT/NNP/@ChippTweetup/NN/:/:/@tweetupbiz/NN/@TweetUpSomerset/VB/having/VBG/talks/NNS/with/IN/@TheBridgeChip/NN/on/IN/wed/MD/to/TO/see/VB/if/IN/we/PRP/can/MD/come/VB/sort/NN/something/NN/out/RP/!/./
+RT/NNP/@ChippTweetup/NN/:/:/@tweetupbiz/NN/@TweetUpSomerset/VB/having/VBG/talks/NNS/with/IN/@TheBridgeChip/NN/on/IN/wed/NN/to/TO/see/VB/if/IN/we/PRP/can/MD/come/VB/sort/NN/something/NN/out/RP/!/./
 TUESDAY/NNP/MAY/NNP/20th/CD/We/PRP/Kick/NNP/Off/NNP/#TakeOffTuesday/VBZ/only/RB/at/IN/DNA/NNP/LEVEL/NNP/C/NNP/NIGHTCLUB/NNP/http://t.co/qbDuSLDSim/NN/
 RT/JJ/@iWetPanties/NNS/:/:/I/PRP/wouldn't/VBP/mind/VB/this/DT/tho/NN/&/CC/#128175/NNP/;/:/&/CC/#128522/NNP/;/:/&/CC/#128081/NNP/;/:/&/CC/#128142/NNP/;/:/http://t.co/MYAyyVX4oR/NN/
 On/IN/#MayDay/NNP/we/PRP/celebrate/VBP/the/DT/victories/NNS/won/VBD/,/,/and/CC/renew/VB/our/PRP$/fight/NN/for/IN/issues/NNS/like/IN/immigration/NN/reform/NN/and/CC/low/JJ/wage/NN/work/NN/http://t.co/GDCBjAhohw/NN/
@@ -489,7 +489,7 @@ I/PRP/might/MD/like/VB/you/PRP/better/JJR/,/,/if/IN/we/PRP/slept/VBP/together/RB
 @CodybJohns/NNS/Pittsburgh/NNP/might/MD/have/VB/been/VBN/late/JJ/to/TO/the/DT/vine/JJ/game/NN/but/CC/we/PRP/got/VBD/a/DT/couple/JJ/steel/NN/city/NN/viners/NNS/!/./Might/NNP/see/VBP/uh/JJ/there/RB/!/./
 May/NNP/1st/CD/:/:/#Selfie/NN/#MayPhotoChallenge\n\nI'll/MD/do/VB/it/PRP/this/DT/month/NN/././I/PRP/never/RB/post/NN/selfies/NNS/but/CC/I'm/NNP/actually/RB/okay&/VBZ/#8230/NN/;/:/http://t.co/NjhvOYv3sZ/NN/
 Does/VBZ/he/PRP/wear/VB/it/PRP/?/./lol\n\nRT/JJ/@JulieSupple/NN/:/:/\n/JJ/@TonyMichael/NN/I/PRP/bought/VBD/one/CD/for/IN/my/PRP$/hubby/NN/;)/NNP/\n\n/NNP/http://t.co/eUfd00PaoF/NN/
-@GuildfordFringe/NN/next/JJ/wed/MD/--/:/which/WDT/pub/NN/?/./which/WDT/musical/JJ/?/./
+@GuildfordFringe/NN/next/JJ/wed/NN/--/:/which/WDT/pub/NN/?/./which/WDT/musical/JJ/?/./
 My/PRP$/goals/NNS/for/IN/May/NNP/!/./I/PRP/wanted/VBD/to/TO/get/VB/back/RB/into/IN/the/DT/swing/NN/of/IN/one/CD/thing/NN/and/CC/work/NN/on/IN/some/DT/others/NNS/!/./http://t.co/6K16Kg45uK/NN/
 @ITS12GAUGEBITCH/JJ/yup/NN/should/MD/be/VB/in/IN/around/IN/8/CD/
 Hey/NNP/@NiallOfficial/NNP/@Harry_Styles/NNP/&/CC/#128522/NNP/;/:/my/PRP$/bday/NN/is/VBZ/on/IN/Sunday/NNP/!/./&/CC/#127880/NNP/;/:/would/MD/you/PRP/mind/VB/giving/VBG/me/PRP/the/DT/best/JJS/gift/NN/ever/RB/?/./follow/VB/me/PRP/?/./Tweet/VB/me/PRP/!?/JJ/ILY/NNP/!!/NNP/&/CC/#10084/NNP/;/:/&/CC/#65039/NNP/;/:/\n&/NNP/#128154/NNP/;/:/x55/NN/

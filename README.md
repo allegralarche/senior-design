@@ -73,7 +73,6 @@ def is_twitter_cf_modal(word):
         word == 'i\'d' or \
         word == 'id' or \
         word == 'we\'d' or \
-        word == 'wed' or \
         word == 'youd' or \
         word == 'you\'d':
             return True
