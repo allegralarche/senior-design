@@ -19,16 +19,15 @@ where
         message like '%might%' OR
         message like '%ought%' OR
         message like '%may%' OR
-        message like '%must%' OR
         message like '%i\'d %' OR
         message like '% id %' OR
-        message like '%i d%' OR
+        message like '%i d %' OR
         message like '%we\'d%' OR
         message like '% wed %' OR
-        message like '%we d%' OR
+        message like '%we d %' OR
         message like '%youd%' OR
         message like '%you\'d%' OR
-        message like '%you d%' OR
+        message like '%you d %' OR
         message like '%wish%' OR
         message like '%rather%'
 LIMIT 1000;
