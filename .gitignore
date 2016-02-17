@@ -1,3 +1,4 @@
 out.txt
 *.pyc
 desktop.ini
+.DS_Store
