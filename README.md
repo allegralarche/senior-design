@@ -45,37 +45,37 @@ Code added to nltk/tag/perceptron.py
 
 
 
-def is_twitter_cf_modal(word):
-    if (word == 'should' or 
-        word == 'shoulda' or 
-        word == 'shulda' or 
-        word == 'shuda' or 
-        word == 'shudda' or 
-        word == 'shudve' or 
-        word == 'would' or 
-        word == 'woulda' or 
-        word == 'wuda' or 
-        word == 'wulda' or 
-        word == 'wudda' or 
-        word == 'wudve' or 
-        word == 'wlda' or 
-        word == 'could' or 
-        word == 'coulda' or 
-        word == 'cudda' or 
-        word == 'culda' or 
-        word == 'cudve' or 
-        word == 'must' or 
-        word == 'mustve' or 
-        word == 'might' or 
-        word == 'mightve' or 
-        word == 'outght' or 
-        word == 'may' or 
-        word == 'i\'d' or 
-        word == 'id' or 
-        word == 'we\'d' or 
-        word == 'youd' or 
-        word == 'you\'d'):
-            return True
-    return False
+    def is_twitter_cf_modal(word):
+        if (word == 'should' or 
+            word == 'shoulda' or 
+            word == 'shulda' or 
+            word == 'shuda' or 
+            word == 'shudda' or 
+            word == 'shudve' or 
+            word == 'would' or 
+            word == 'woulda' or 
+            word == 'wuda' or 
+            word == 'wulda' or 
+            word == 'wudda' or 
+            word == 'wudve' or 
+            word == 'wlda' or 
+            word == 'could' or 
+            word == 'coulda' or 
+            word == 'cudda' or 
+            word == 'culda' or 
+            word == 'cudve' or 
+            word == 'must' or 
+            word == 'mustve' or 
+            word == 'might' or 
+            word == 'mightve' or 
+            word == 'outght' or 
+            word == 'may' or 
+            word == 'i\'d' or 
+            word == 'id' or 
+            word == 'we\'d' or 
+            word == 'youd' or 
+            word == 'you\'d'):
+                return True
+        return False
 
 ---------------------------------------------
