@@ -47,6 +47,7 @@ def identify(tagged_line):
         return True
 
     # CASE 5 MODAL PREPOSITIONAL
+    # Problem: can't find prepositional phrases 
     # p5 = "";
 
     # CASE 6 HYPOTHETICAL NORMAL
