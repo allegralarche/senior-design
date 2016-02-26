@@ -79,17 +79,17 @@ def getForm(tagged_line):
         return 1
 
     # CASE 2 CONJUNTION NORMAL
-    p2 = re.compile('\.*((/CC/)|(/IN/)).*((/VBD/)|(/VBN/)|(/VB/)).*/MD/', re.IGNORECASE)
+    p2 = re.compile('\.*((/CC/)|(/IN/)).*((/VBD/)|(/VBN/)).*/MD/', re.IGNORECASE)
     if p2.search(tagged_line) != None:
         return 2
 
     # CASE 3 CONJUNCTIVE CONVERSE
-    p3 = re.compile('\.*/MD/.*((/CC/)|(/IN/)).*((/VBN/)|(/VBD/)|(/VB/))', re.IGNORECASE)
+    p3 = re.compile('\.*/MD/.*(/IN/).*((/VBN/)|(/VBD/))', re.IGNORECASE)
     if p3.search(tagged_line) != None:
         return 3
 
     # CASE 4 MODAL NORMAL
-    p4 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)|(/VB/)).*/MD/.*((/VBN/)|(/VBD/)|(/VB/))', re.IGNORECASE)
+    p4 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)).*/MD/.*((/VBN/)|(/VBD/))', re.IGNORECASE)
     if p4.search(tagged_line) != None:
         return 4
 
@@ -125,7 +125,7 @@ def main(argv):
     report_file = open('report.txt', 'w')
     label_file = open(str(sys.argv[2]), 'r')
 
-    cf_count = [0] * 7
+    cf_count = [[0 for x in range(7)] for x in range(7)]
 
     y_true = label_file.read().splitlines()
     y_true = [int(i) for i in y_true]
@@ -135,13 +135,17 @@ def main(argv):
     print("Reading file...")
     tagged_line = infile.readline()
 
+    i = 0
     while tagged_line != '': 
         
         # Get Counterfactual form
-        form = getForm(tagged_line)
+        form = int(getForm(tagged_line))
 
         # Increase counter
-        cf_count[form] = cf_count[form] + 1
+        cf_count[form][0] = cf_count[form][0] + 1
+
+        if(y_true[i] == 1):
+            cf_count[form][1] = cf_count[form][1] + 1
 
         if(form == 0):
             # write 0
@@ -154,6 +158,7 @@ def main(argv):
             y_pred.append(1)
 
 
+        i = i + 1
         tagged_line = infile.readline()
 
     # close file and connection
@@ -164,14 +169,26 @@ def main(argv):
     accuracy = accuracy_score(y_true, y_pred)
     precision, recall, thresholds = precision_recall_curve(y_true, y_pred)
 
+    count = 0
+    for i in xrange(1,7):
+        count = count + cf_count[i][0]
+
+    report_file.write("Identified " + str(count) + " Counterfactuals \n")
     report_file.write("Accuracy: %0.4f \n" % accuracy)
     report_file.write("Precision: %0.4f \n" % precision[1])
     report_file.write("Recall: %0.4f \n" % recall[1])
 
+    for i in xrange(1,7):
+        c = 1
+        if cf_count[i][0] != 0:
+            c = float(cf_count[i][1]) / float(cf_count[i][0])
+        report_file.write("Form %d   Count: %d,  Accuracy: %0.4f \n" % (i, cf_count[i][0], c))
+
     report_file.close()
 
+
     print("Finished tagging... Closing files.")
-    print("Identified " + str(cf_count) + " Counterfactuals")
+    print("Identified " + str(count) + " Counterfactuals")
 
 
 if __name__ == "__main__":

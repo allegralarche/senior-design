@@ -1,0 +1,10 @@
+Identified 131 Counterfactuals 
+Accuracy: 0.8700 
+Precision: 0.4427 
+Recall: 0.5043 
+Form 1   Count: 31,  Accuracy: 0.7742 
+Form 2   Count: 46,  Accuracy: 0.3261 
+Form 3   Count: 51,  Accuracy: 0.3333 
+Form 4   Count: 1,  Accuracy: 1.0000 
+Form 5   Count: 1,  Accuracy: 0.0000 
+Form 6   Count: 1,  Accuracy: 1.0000 
