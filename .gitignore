@@ -3,3 +3,5 @@ out.txt
 desktop.ini
 .DS_Store
 node_modules
+npm-debug.log
+webapp/npm-debug.log
