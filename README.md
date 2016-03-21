@@ -35,8 +35,10 @@ Code added to nltk/tag/perceptron.py
             if not tag:
                 features = self._get_features(i, word, context, prev, prev2)
                 tag = self.model.predict(features)
+            ### ADD THESE LINES
             if (is_twitter_cf_modal(word)):
                 tag = 'MD'
+            ###
             output.append((word, tag))
             prev2 = prev
             prev = tag
@@ -44,37 +46,38 @@ Code added to nltk/tag/perceptron.py
         return output
 
 
-
+### ADD THIS FUNCTION ###
 def is_twitter_cf_modal(word):
-    if (word == 'should' or 
-        word == 'shoulda' or 
-        word == 'shulda' or 
-        word == 'shuda' or 
-        word == 'shudda' or 
-        word == 'shudve' or 
-        word == 'would' or 
-        word == 'woulda' or 
-        word == 'wuda' or 
-        word == 'wulda' or 
-        word == 'wudda' or 
-        word == 'wudve' or 
-        word == 'wlda' or 
-        word == 'could' or 
-        word == 'coulda' or 
-        word == 'cudda' or 
-        word == 'culda' or 
-        word == 'cudve' or 
-        word == 'must' or 
-        word == 'mustve' or 
-        word == 'might' or 
-        word == 'mightve' or 
-        word == 'outght' or 
-        word == 'may' or 
-        word == 'i\'d' or 
-        word == 'id' or 
-        word == 'we\'d' or 
-        word == 'youd' or 
-        word == 'you\'d'):
+    w = word.lower()
+    if (w == 'should' or 
+        w == 'shoulda' or 
+        w == 'shulda' or 
+        w == 'shuda' or 
+        w == 'shudda' or 
+        w == 'shudve' or 
+        w == 'would' or 
+        w == 'woulda' or 
+        w == 'wuda' or 
+        w == 'wulda' or 
+        w == 'wudda' or 
+        w == 'wudve' or 
+        w == 'wlda' or 
+        w == 'could' or 
+        w == 'coulda' or 
+        w == 'cudda' or 
+        w == 'culda' or 
+        w == 'cudve' or 
+        w == 'must' or 
+        w == 'mustve' or 
+        w == 'might' or 
+        w == 'mightve' or 
+        w == 'outght' or 
+        w == 'may' or 
+        w == 'i\'d' or 
+        w == 'id' or 
+        w == 'we\'d' or 
+        w == 'youd' or 
+        w == 'you\'d'):
             return True
     return False
 

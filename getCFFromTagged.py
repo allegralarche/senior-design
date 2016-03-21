@@ -74,24 +74,30 @@ def identify(tagged_line):
 def getForm(tagged_line):
 
     # CASE 1 WISH VERB FORM
-    p1 = re.compile('\wish\/VB.*/', re.IGNORECASE)
+    p1 = re.compile('\.*(wish|wishing)/(VB.*/|JJ/)', re.IGNORECASE)
     if p1.search(tagged_line) != None:
         return 1
 
-    # CASE 2 CONJUNTION NORMAL
-    p2 = re.compile('\.*((/CC/)|(/IN/)).*((/VBD/)|(/VBN/)).*/MD/', re.IGNORECASE)
+        # CASE 4 MODAL NORMAL
+    p2 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)).*/MD/.*((/VBN/)|(/VBD/)|(/VB/)|(VBZ))', re.IGNORECASE)
     if p2.search(tagged_line) != None:
         return 2
 
-    # CASE 3 CONJUNCTIVE CONVERSE
-    p3 = re.compile('\.*/MD/.*(/IN/).*((/VBN/)|(/VBD/))', re.IGNORECASE)
+    # CASE 2 CONJUNTION NORMAL
+    p3 = re.compile('\.*((/CC/)|(/IN/)).*/NN/((/VBD/)|(/VBN/)).*/MD/', re.IGNORECASE)
     if p3.search(tagged_line) != None:
         return 3
 
-    # CASE 4 MODAL NORMAL
-    p4 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)).*/MD/.*((/VBN/)|(/VBD/))', re.IGNORECASE)
+    # CASE 3 CONJUNCTIVE CONVERSE
+    p4 = re.compile('\.*/MD/.*/IN/.*((/VBN/)|(/VBD/))', re.IGNORECASE)
     if p4.search(tagged_line) != None:
         return 4
+
+    # CASE 4 MODAL NORMAL
+    # p4 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)).*/MD/.*((/VBN/)|(/VBD/))', re.IGNORECASE)
+    # if p4.search(tagged_line) != None:
+    #    return 4
+
 
     # CASE 5 HYPOTHETICAL NORMAL
     # Key words: rather, imagine, envision, conceptualize, conjure up, visualize
@@ -100,12 +106,14 @@ def getForm(tagged_line):
         return 5
 
     # CASE 6 VERB INVERSION
-    p6 = re.compile('\.*((were/)|(had/)).*((/NN/)|(/NNP/)|(/NNPS/)|(/NNS/)|(/PRP.*/)).*((/VBN/)|(/VBD/)|(/VB/)).*/MD/', re.IGNORECASE)
+    p6 = re.compile('\.*((were/)|(had/)).*((/NN/)|(/NNP/)|(/NNPS/)|(/NNS/)|(/PRP.*/)).*((/VBN/)|(/VBD/)).*/MD/', re.IGNORECASE)
     if p6.search(tagged_line) != None:
         return 6
 
-    # CASE 7 MODAL PREPOSITIONAL
-    # p7 = "";
+    # CASE 7 MODAL Adverb Comparative
+    p7 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)|(/VB/)).*/RBR/.*/MD/.*((/VBN/)|(/VBD/)|(/VB/))', re.IGNORECASE)
+    if p7.search(tagged_line) != None:
+        return 7
 
     # If no matches
     return 0
@@ -125,7 +133,9 @@ def main(argv):
     report_file = open('report.txt', 'w')
     label_file = open(str(sys.argv[2]), 'r')
 
-    cf_count = [[0 for x in range(7)] for x in range(7)]
+    form_num = 8
+
+    cf_count = [[0 for x in range(form_num)] for x in range(form_num)]
 
     y_true = label_file.read().splitlines()
     y_true = [int(i) for i in y_true]
@@ -170,7 +180,7 @@ def main(argv):
     precision, recall, thresholds = precision_recall_curve(y_true, y_pred)
 
     count = 0
-    for i in xrange(1,7):
+    for i in xrange(1,form_num):
         count = count + cf_count[i][0]
 
     report_file.write("Identified " + str(count) + " Counterfactuals \n")
@@ -178,11 +188,18 @@ def main(argv):
     report_file.write("Precision: %0.4f \n" % precision[1])
     report_file.write("Recall: %0.4f \n" % recall[1])
 
-    for i in xrange(1,7):
+    for i in xrange(1,form_num):
         c = 1
         if cf_count[i][0] != 0:
             c = float(cf_count[i][1]) / float(cf_count[i][0])
         report_file.write("Form %d   Count: %d,  Accuracy: %0.4f \n" % (i, cf_count[i][0], c))
+
+    report_file.write("Incorrect predictions\n")
+    report_file.write("idx, pred, label\n")
+
+    for i in xrange(len(y_true)):
+        if(int(y_true[i]) != int(y_pred[i])):
+            report_file.write(str(i + 1) + " " + str(y_pred[i]) +  " " + str(y_true[i]) + "\n")
 
     report_file.close()
 
