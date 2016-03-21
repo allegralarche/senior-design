@@ -84,7 +84,7 @@ def getForm(tagged_line):
         return 2
 
     # CASE 2 CONJUNTION NORMAL
-    p3 = re.compile('\.*((/CC/)|(/IN/)).*/NN/((/VBD/)|(/VBN/)).*/MD/', re.IGNORECASE)
+    p3 = re.compile('\.*((/CC/)|(/IN/)).*((/VBD/)|(/VBN/)).*/MD/', re.IGNORECASE)
     if p3.search(tagged_line) != None:
         return 3
 
@@ -97,6 +97,7 @@ def getForm(tagged_line):
     # p4 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)).*/MD/.*((/VBN/)|(/VBD/))', re.IGNORECASE)
     # if p4.search(tagged_line) != None:
     #    return 4
+
 
 
     # CASE 5 HYPOTHETICAL NORMAL
