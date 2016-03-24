@@ -1,11 +1,11 @@
--------------------------------------------------------------------
+
 Make sure you do this
     mysql -u root -p
     GRANT SELECT ON randomTwitter_by_month.* TO 'username'@'localhost';
     GRANT SELECT ON randomTwitter_by_month.* TO 'username'@'%';
--------------------------------------------------------------------
-Scripts
+    
 
+-------------------------------------------------------------------
 getTweetsFromSQL.py is used to parse the results of an SQL query to a text file. To run, use do the following two steps.
 
 1. Run in command prompt
@@ -18,6 +18,7 @@ getTaggedFile.py is used to tag the Tweets that were output from getTweetsFromSQ
 
 Usage
     python getTaggedFile.py <input file> <output file>
+    
 -------------------------------------------------------------------
 
 Code added to nltk/tag/perceptron.py 
