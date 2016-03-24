@@ -1,6 +1,6 @@
 -------------------------------------------------------------------
 Make sure you do this:
-mysql -u root
+mysql -u root -p
 GRANT SELECT ON randomTwitter_by_month.* TO 'username'@'localhost';
 GRANT SELECT ON randomTwitter_by_month.* TO 'username'@'%';
 -------------------------------------------------------------------
@@ -18,7 +18,8 @@ getTaggedFile.py is used to tag the Tweets that were output from getTweetsFromSQ
 Usage: python getTaggedFile.py <input file> <output file>
 -------------------------------------------------------------------
 
-Code added to nltk/tag/perceptron.py
+Code added to nltk/tag/perceptron.py 
+nltk directory likely found in C:\Anaconda\Lib\site-packages
 
     def tag(self, tokens):
         '''
@@ -38,12 +39,15 @@ Code added to nltk/tag/perceptron.py
             ### ADD THESE LINES
             if (is_twitter_cf_modal(word)):
                 tag = 'MD'
+            elif (tag_CCJ(word)):
+                tag = 'CCJ'ls
             ###
             output.append((word, tag))
             prev2 = prev
             prev = tag
 
         return output
+
 
 
 ### ADD THIS FUNCTION ###
@@ -71,7 +75,7 @@ def is_twitter_cf_modal(word):
         w == 'mustve' or 
         w == 'might' or 
         w == 'mightve' or 
-        w == 'outght' or 
+        w == 'ought' or 
         w == 'may' or 
         w == 'i\'d' or 
         w == 'id' or 
@@ -80,5 +84,35 @@ def is_twitter_cf_modal(word):
         w == 'you\'d'):
             return True
     return False
+
+### ADD THIS FUNCTION ###
+def tag_CCJ(word):
+    w = word.lower()
+    '''
+    as long as, even if, if, one condition that, provided (that), 
+    providing (that), so long as, unless, whether... or, supposing, 
+    suppose, imagine, but for
+    '''
+    if(w == 'as' or
+        w == 'if' or
+        w == 'even' or
+        w == 'provided' or
+        w == 'providing' or
+        w == 'suppose' or
+        w == 'supposing' or
+        w == 'unless' or
+        w == 'whether' or
+        w == 'rather' or
+        w == 'envision' or
+        w == 'envisioning' or
+        w == 'conceptualize'or
+        w == 'conceptualizing' or
+        w == 'conjure' or
+        w == 'conjuring' or
+        w == 'visualize' or
+        w == 'visualizing'):
+        return True
+    return False
+
 
 ---------------------------------------------

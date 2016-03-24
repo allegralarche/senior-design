@@ -50,7 +50,7 @@ def identify(tagged_line):
         # print("p4")
         return True
 
-    # CASE 5 HYPOTHETICAL NORMAL
+    # CASE 6 HYPOTHETICAL NORMAL
     # Key words: rather, imagine, envision, conceptualize, conjure up, visualize
     p5 = re.compile('\.*((rather/)|(imagine/)|(envision/)|(conceptualize/)|(conjure/)|(visualize/)).*/VB.*/.*/MD/', re.IGNORECASE)
     if p5.search(tagged_line) != None:
