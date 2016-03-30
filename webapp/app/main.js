@@ -5,7 +5,6 @@ var angularRoute = require("angular-route");
 var controllers = require("./controllers");
 var directives = require("./directives");
 var services = require("./services");
-var _ = require("lodash");
 var logger = require("angular-simple-logger");
 var angMaps = require("angular-google-maps");
 var style = require("./appStyles");

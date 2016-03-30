@@ -1,7 +1,7 @@
 {
-  "name": "webpack-express-boilerplate",
+  "name": "counterfactual-coding",
   "version": "0.1.0",
-  "description": "A boilerplate for running a Webpack workflow in Node express",
+  "description": "Senior Design Project on Counterfactual Classification of Tweets",
   "main": "server.js",
   "repository": {
     "type": "git",

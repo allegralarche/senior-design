@@ -5,9 +5,9 @@ const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config.js');
-const mysql = require('mysql');
+const mysql = require('node-mysql');
 const sshTunnel = require('tunnel-ssh');
-const Twitter = require('twitter');
+const Twitter = require('twitter-node-client').Twitter;
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
@@ -37,7 +37,7 @@ if (isDeveloping) {
 	});
 
 
-	const sshConfig = {
+	/*const sshConfig = {
 		host: '128.91.79.105',
 		dstPort: 3306,
 	    username: 'joeraso',
@@ -65,9 +65,9 @@ if (isDeveloping) {
 		});
 
 		connection.end();
-    });
+    });*/
 
-	var client = new Twitter({
+	var twitterClient = new Twitter({
 		consumer_key: '	3vDKSh6NkZD5TYe4YSra5Vlws',
 		consumer_secret: '	2mJOtdrtaAzEsBcRCHBeCIaqbJaReF5IZS8zjEZTAliQiASh5D',
 		access_token_key: '363448613-TPHWxpzk69qJ4JbwOMeCORXucgB40Oq9bJxoKIBL',
