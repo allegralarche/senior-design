@@ -1,0 +1,48 @@
+h1, h2, h3, p {
+	font-family: 'Lato';
+}
+
+body {
+	margin: 0px;
+}
+
+.head {
+	height:150px;
+	width: 100%;
+	padding: 30px 20px 30px 20px;
+	background-color: #292f33;
+	color: white;
+}
+
+.body {
+	margin: 0px 100px 0px 100px;
+	border: 1px solid #ccd6dd;
+}
+
+h1 {
+	margin: 0px 0px 30px 0px;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+p {
+	font-size: 16px;
+}
+
+.indent {
+	margin-left: 100px;
+}
+
+
+.angular-google-map-container {
+	height: 400px;
+}
