@@ -6,13 +6,8 @@ const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config.js');
-
-const mysql = require('mysql');
+const mysql = require('node-mysql');
 const sshTunnel = require('tunnel-ssh');
-const Twitter = require('twitter');
-
-var ENV = process.env.npm_lifecycle_event;
-var isTest = ENV === 'test'
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
@@ -71,13 +66,6 @@ if (isDeveloping) {
 
 		connection.end();
     });
-
-	var client = new Twitter({
-		consumer_key: '	3vDKSh6NkZD5TYe4YSra5Vlws',
-		consumer_secret: '	2mJOtdrtaAzEsBcRCHBeCIaqbJaReF5IZS8zjEZTAliQiASh5D',
-		access_token_key: '363448613-TPHWxpzk69qJ4JbwOMeCORXucgB40Oq9bJxoKIBL',
-		access_token_secret: 'k9NpfGnrGLjBtui2Ay7E3kC7JDeC5sO1g6BWrouL2CbNr'
-	});
 
 	
 
