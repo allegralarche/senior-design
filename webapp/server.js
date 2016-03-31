@@ -35,7 +35,7 @@ if (isDeveloping) {
 	});
 
 
-	const sshConfig = {
+	/*const sshConfig = {
 		host: '128.91.79.105',
 		dstPort: 3306,
 	    username: 'joeraso',
@@ -63,7 +63,7 @@ if (isDeveloping) {
 		});
 
 		connection.end();
-    });
+    });*/
 
 	
 

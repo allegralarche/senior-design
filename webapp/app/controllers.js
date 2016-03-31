@@ -17,7 +17,9 @@ var error = function (err, response, body) {
         console.log('ERROR [%s]', err);
     };
 
-CFControllers.controller('HomeCtrl', ['$scope',
+// Model: scope, View: Html, Controller: this
+// the scope is an object with the available properties and functions
+CFControllers.controller('MapsCtrl', ['$scope',
 	function($scope) {
 
 		$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
@@ -25,10 +27,9 @@ CFControllers.controller('HomeCtrl', ['$scope',
 	}]);
 
 CFControllers.controller('TwitterCtrl', function($scope) {
-	$scope.username = "";
 	$scope.getTweets = function() {
 		twitterClient.getUserTimeline({screen_name: $scope.username, count : 10}, error, function(data) {
-			// use express router to route to page displaying tweets
+			console.log(data);
 		});
 	};
 

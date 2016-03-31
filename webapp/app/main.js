@@ -10,8 +10,7 @@ var angMaps = require("angular-google-maps");
 var style = require("./appStyles");
 var jss = require("jss");
 
-var sheet = jss.createStyleSheet(style, {named: false}).attach();
-
+require("../stylesheets/global.css");
 var CFApp = angular.module("CFApp", [
 	'ngRoute',
 	'CFControllers',
