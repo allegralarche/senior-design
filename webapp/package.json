@@ -21,6 +21,9 @@
   "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
   "dependencies": {
     "angular": "^1.5.0",
+    "jquery": "^2.2.2",
+    "oauthio": "^0.3.3",
+    "oauthio-web": "^0.5.2",
     "twitter-node-client": "0.0.6"
   },
   "devDependencies": {

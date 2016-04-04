@@ -1,37 +1,70 @@
 'use strict';
 
 var Twitter = require('twitter-node-client').Twitter;
+var $ = require("jquery");
+
 var CFControllers = angular.module('CFControllers', []); // this is the app
-
-var twitterConfig = {
-        "consumerKey": "3vDKSh6NkZD5TYe4YSra5Vlws",
-        "consumerSecret": "2mJOtdrtaAzEsBcRCHBeCIaqbJaReF5IZS8zjEZTAliQiASh5D",
-        "accessToken": "363448613-TPHWxpzk69qJ4JbwOMeCORXucgB40Oq9bJxoKIBL",
-        "accessTokenSecret": "k9NpfGnrGLjBtui2Ay7E3kC7JDeC5sO1g6BWrouL2CbNr",
-        "callBackUrl": ""
-    }
-
-var twitterClient = new Twitter(twitterConfig);
 // callback function
 var error = function (err, response, body) {
         console.log('ERROR [%s]', err);
     };
 
+// Home Controller
 CFControllers.controller('HomeCtrl', ['$scope',
 	function($scope) {
-
-		$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 		
 	}]);
 
-CFControllers.controller('TwitterCtrl', function($scope) {
-	$scope.username = "";
-	$scope.getTweets = function() {
-		twitterClient.getUserTimeline({screen_name: $scope.username, count : 10}, error, function(data) {
-			// use express router to route to page displaying tweets
-		});
-	};
+// Map Controller
+CFControllers.controller('MapCtrl', ['$scope',
+	function($scope) {
+		$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+	}])
 
+// Twitter User Controller
+CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService) {
+	$scope.tweets = [];
+
+	twitterService.initialize();
+
+	$scope.refreshTimeline = function(maxID) {
+		console.log($scope.tweets);
+		twitterService.getLatestTweets(maxID).then(function(data) {
+			$scope.tweets = $scope.tweets.concat(data);
+		}, function() {
+			$scope.rateLimitError = true;
+		});
+	}
+
+	$scope.connectButton = function() {
+		twitterService.connectTwitter().then(function() {
+			if (twitterService.isReady()) {
+				$('#connectButton').fadeOut(function() {
+					$('#getTimelineButton, #signOut').fadeIn();
+                    $scope.refreshTimeline();
+                    $scope.connectedTwitter = true;
+				});
+			}
+		});
+	}
+
+	$scope.signOut = function() {
+		twitterService.clearCache();
+		$scope.tweets.length = 0;
+		$('#getTimelineButton, #signOut').fadeOut(function() {
+			$('#connectButton').fadeIn();
+			$scope.$apply(function() {
+				$scope.connectedTwitter = false;
+			})
+		})
+	}
+
+	if (twitterService.isReady()) {
+		$('#connectButton').hide();
+		$('#getTimelineButton, #signOut').show();
+        $scope.connectedTwitter = true;
+        $scope.refreshTimeline();
+	};
 
 });
 

@@ -7,7 +7,7 @@
     <meta name="description" content="Senior Design UPenn 2016">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body ng-controller="TwitterCtrl">
   <div class="head">
     <h1>Coding Counterfactuals</h1>
     <h2>A senior design project at the university of Pennsylvania by Allegra Larche, Joey Raso, Kevin Zembroski, and Anthony Janocko</h2>
@@ -21,6 +21,14 @@
     <h3>Why do we care?</h3>
     <p>Significance of counterfactuals goes here</p>
     
+    <div class="col-xs-6">
+                <button ng-click="connectButton()" id="connectButton" type="button" class="btn btn-primary">Connect Twitter</button>
+                <button ng-click="refreshTimeline()" id="getTimelineButton" type="button" class="btn btn-info" style="display:none;">Get My Timeline</button>
+                <button ng-click="signOut()" id="signOut" type="button" class="btn btn-link" style="display:none;">Sign Out</button>
+            </div>
+            <div class="col-xs-6">
+                <input type="text" ng-model="searchTerm" class="form-control" id="searchBox" placeholder="Enter search term here" ng-show="connectedTwitter" />
+            </div>
   </div>
   <div class="footer">
   </div>
