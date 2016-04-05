@@ -28,9 +28,12 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService) {
 	twitterService.initialize();
 
 	$scope.refreshTimeline = function(maxID) {
-		console.log($scope.tweets);
 		twitterService.getLatestTweets(maxID).then(function(data) {
 			$scope.tweets = $scope.tweets.concat(data);
+
+			for (var t in $scope.tweets) {
+				console.log(t);
+			}
 		}, function() {
 			$scope.rateLimitError = true;
 		});

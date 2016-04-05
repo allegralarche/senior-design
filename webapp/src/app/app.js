@@ -1,20 +1,23 @@
 'use strict';
 
+require("../style/global.css");
+require("bootstrap/dist/css/bootstrap.css");
+
 var angular = require("angular");
 var angularRoute = require("angular-route");
+var angularSanitize = require("angular-sanitize");
 var controllers = require("./controllers");
 var directives = require("./directives");
 var services = require("./services");
 var logger = require("angular-simple-logger");
 var angMaps = require("angular-google-maps");
 
-require("../style/global.css");
-
 var CFApp = angular.module("CFApp", [
 	'ngRoute',
 	'CFControllers',
 	'CFDirectives',
 	'CFServices',
+	'ngSanitize',
 	'uiGmapgoogle-maps'
 ]);
 
