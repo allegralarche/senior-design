@@ -39,7 +39,7 @@ CFServices.factory('twitterService', function($q) {
 		},
 		getLatestTweets: function(maxID) {
 			var deferred = $q.defer();
-			var url = '/1.1/statuses/home_timeline.json';
+			var url = '/1.1/statuses/user_timeline.json';
 			if (maxID) {
 				url += '?max_id=' + maxID;
 			}
