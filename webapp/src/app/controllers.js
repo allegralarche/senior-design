@@ -25,10 +25,9 @@ CFControllers.controller('HomeCtrl', ['$scope',
 	}]);
 
 CFControllers.controller('TwitterCtrl', function($scope) {
-	$scope.username = "";
 	$scope.getTweets = function() {
 		twitterClient.getUserTimeline({screen_name: $scope.username, count : 10}, error, function(data) {
-			// use express router to route to page displaying tweets
+			console.log(data);
 		});
 	};
 
