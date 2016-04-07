@@ -22,45 +22,11 @@
         </div>
         <h3>Why do we care?</h3>
         <p>Significance of counterfactuals goes here</p>
-      </div>
-      <div class="row">
-          <button ng-click="connectButton()" id="connectButton" type="button" class="btn btn-primary">Connect Twitter</button>
-          <button ng-click="refreshTimeline()" id="getTimelineButton" type="button" class="btn btn-info" style="display:none;">Get My Timeline</button>
-          <button ng-click="signOut()" id="signOut" type="button" class="btn btn-link" style="display:none;">Sign Out</button>
-      </div>
-      <div class="row">
-        <div class="col-xs-12" id="results">
-          <div class="row" ng-repeat="t in tweets">
-            <twitter-widget twitter-widget-id="t.id_str">
-            </twitter-widget>
-          </div>
-          <div ng-show="rateLimitError">
-            Rate limit reached. You are making too many requests.
-          </div>
-          <div>
-            <br/>
-            <input type="button" class="btn btn-info" id="load-more" ng-click="refreshTimeline(tweets[tweets.length-1].id)" ng-show="connectedTwitter" value="Load More" />
-          </div>
-        </div>
+        <h3>Further Reading/Current Research</h3>
+        <p>Readings and research on counterfactuals goes here</p>
+        <h3>Our findings/contributions</h3>
+        <p>results from kevin and anth</p>
       </div>
     </div>
   </body>
-  <script>
-    window.twttr = (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {};
-      if (d.getElementById(id)) return t;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js, fjs);
-     
-      t._e = [];
-      t.ready = function(f) {
-        t._e.push(f);
-      };
- 
-      return t;
-    }(document, "script", "twitter-wjs"));
-  </script>
 </html>
