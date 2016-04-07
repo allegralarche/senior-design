@@ -6,7 +6,7 @@ from datetime import date, datetime, timedelta
 from sklearn.metrics import classification_report
 from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import accuracy_score
-import mysql.connector
+#import mysql.connector
 import traceback
 import nltk
 import sys
@@ -79,6 +79,7 @@ def getForm(tagged_line):
     # pq = re.compile('\.*\?.*')
     # if p0.search(tagged_line) != None or pq.search(tagged_line) != None:
     #     return 0
+
 
     # CASE 1 WISH VERB FORM
     p1 = re.compile('\.*(wish|wishing)/(VB.*/|JJ/)', re.IGNORECASE)

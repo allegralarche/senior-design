@@ -1,6 +1,7 @@
 'use strict';
 
 var Twitter = require('twitter-node-client').Twitter;
+var PythonShell = require('python-shell');
 var $ = require("jquery");
 
 var CFControllers = angular.module('CFControllers', ['ngtweet']); // this is the app
@@ -34,6 +35,21 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService) {
 		}, function() {
 			$scope.rateLimitError = true;
 		});
+	}
+
+	$scope.filterCounterfactuals = function(tweet) {
+		var options = {
+			args = [tweet.text],
+			scriptPath = '../../../python/',
+			pythonPath = 'C://Users/alleg/Anaconda2/python',
+		};
+		PythonShell.run('getCFFromTagged.py', options, function(err, result) {
+			if(!err) {
+				return result > 0;
+			} else {
+				console.log(err);
+			}
+		})
 	}
 
 	$scope.connectButton = function() {

@@ -6,7 +6,7 @@
     <title>Coding Counterfactuals</title>
     <meta name="description" content="Senior Design UPenn 2016">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <script src="bower_modules/ngtweet/dist/ngtweet.min.js"></script> 
+    <script src="bower_modules/ngtweet/dist/ngtweet.min.jsaa"></script> 
   </head>
   <body class="container" ng-controller="TwitterCtrl">
     <div class="jumbotron">
@@ -30,7 +30,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12" id="results">
-          <div class="row" ng-repeat="t in tweets | filter:searchTerm">
+          <div class="row" ng-repeat="t in tweets | filter: filterCounterfactuals">
             <!--<div class="col-xs-2 col-sm-1">
               <img ng-src="{{t.user.profile_image_url}}" class="img-circle">
             </div>
@@ -40,7 +40,7 @@
             </div>-->
             <twitter-widget>
             <blockquote class="twitter-tweet" data-cards="hidden">
-              <p>{{t.txt}}</p>
+              <p>{{t.text}}</p>
               — {{t.user.name}} (@{{t.user.screen_name}})
               <a href="{{t.source}}">
                 {{t.created_at}}
