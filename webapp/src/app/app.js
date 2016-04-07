@@ -1,16 +1,20 @@
 'use strict';
 
+// Styles
 require("../style/global.css");
 require("bootstrap/dist/css/bootstrap.css");
 
 var angular = require("angular");
 var angularRoute = require("angular-route");
 var angularSanitize = require("angular-sanitize");
-var controllers = require("./controllers");
-var directives = require("./directives");
-var services = require("./services");
+var ngTweet = require("../../lib/ngTweet/ngtweet.min.js");
 var logger = require("angular-simple-logger");
 var angMaps = require("angular-google-maps");
+var localStorage = require("angular-local-storage");
+
+var services = require("./services");
+var directives = require("./directives");
+var controllers = require("./controllers");
 
 var CFApp = angular.module("CFApp", [
 	'ngRoute',
@@ -18,7 +22,9 @@ var CFApp = angular.module("CFApp", [
 	'CFDirectives',
 	'CFServices',
 	'ngSanitize',
-	'uiGmapgoogle-maps'
+	'ngtweet',
+	'uiGmapgoogle-maps',
+	'LocalStorageModule'
 ]);
 
 CFApp.config(['uiGmapGoogleMapApiProvider',

@@ -3,11 +3,12 @@
 var Twitter = require('twitter-node-client').Twitter;
 var $ = require("jquery");
 
+
 var CFControllers = angular.module('CFControllers', []); // this is the app
 // callback function
 var error = function (err, response, body) {
-        console.log('ERROR [%s]', err);
-    };
+    console.log('ERROR [%s]', err);
+};
 
 // Home Controller
 CFControllers.controller('HomeCtrl', ['$scope',
@@ -22,18 +23,19 @@ CFControllers.controller('MapCtrl', ['$scope',
 	}])
 
 // Twitter User Controller
-CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService) {
+CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, localStorageService) {
 	$scope.tweets = [];
-
 	twitterService.initialize();
 
 	$scope.refreshTimeline = function(maxID) {
 		twitterService.getLatestTweets(maxID).then(function(data) {
 			$scope.tweets = $scope.tweets.concat(data);
+			localStorageService.set("tweets", $scope.tweets);
 
-			for (var t in $scope.tweets) {
-				console.log(t);
-			}
+			$scope.tweets.forEach(function(element, index) {
+				console.log(element);
+			})
+			
 		}, function() {
 			$scope.rateLimitError = true;
 		});

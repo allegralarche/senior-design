@@ -29,14 +29,9 @@
       </div>
       <div class="row">
         <div class="col-xs-12" id="results">
-          <div class="row" ng-repeat="t in tweets | filter:searchTerm">
-            <div class="col-xs-2 col-sm-1">
-              <img ng-src="{{t.user.profile_image_url}}" class="img-circle">
-            </div>
-            <div class="col-xs-10 col-sm-11">
-              <small>{{t.user.name}}</small>
-              <br><span ng-bind-html="t.text"></span>
-            </div>
+          <div class="row" ng-repeat="t in tweets">
+            <twitter-widget twitter-widget-id="t.id_str">
+            </twitter-widget>
           </div>
           <div ng-show="rateLimitError">
             Rate limit reached. You are making too many requests.

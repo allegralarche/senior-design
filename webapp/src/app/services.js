@@ -37,11 +37,11 @@ CFServices.factory('twitterService', function($q) {
 			OAuth.clearCache('twitter');
 			authorizationResult = false;
 		},
-		getLatestTweets: function(maxID) {
+		getLatestTweets: function(maxId) {
 			var deferred = $q.defer();
 			var url = '/1.1/statuses/home_timeline.json';
-			if (maxID) {
-				url += '?max_id=' + maxID;
+			if (maxId) {
+				url += '?max_id=' + maxId;
 			}
 			var promise = authorizationResult.get(url).done(function(data) {
 				deferred.resolve(data);
