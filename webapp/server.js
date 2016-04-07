@@ -13,6 +13,7 @@ const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
 const app = express();
 
+const pythonShell = require('python-shell');
 
 if (isDeveloping) {
 	const compiler = webpack(config);
@@ -31,15 +32,17 @@ if (isDeveloping) {
 
 	app.use(middleware);
 	app.use(webpackHotMiddleware(compiler));
+
+
 	app.get('/', function response(req, res) {
 	    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
 	    res.end();
 	});
-	app.get('/login', function response(req, res) {
-	    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/login.html')));
-	    res.end();
-	});
 
+
+	app.post('/runScript', function response(req, res) {
+		console.log("Running Script");
+	})
 
 	/*const sshConfig = {
 		host: '128.91.79.105',
@@ -76,15 +79,10 @@ if (isDeveloping) {
 }
 else {
   app.use(express.static(__dirname + '/dist'));
+
   app.get('/', function response(req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
-  app.get("/login", function(req, res) {
-  	res.sendFile(path.join(__dirname, 'dist/login.html'));
-  });
-  app.get("/maps", function(req, res) {
-  	res.sendFile(path.join(__dirname, 'dist/maps.html'));
-  })
 }
 
 

@@ -5,7 +5,7 @@ require("../style/global.css");
 require("bootstrap/dist/css/bootstrap.css");
 
 var angular = require("angular");
-var angularRoute = require("angular-route");
+var angularRoute = require("angular-ui-router");
 var angularSanitize = require("angular-sanitize");
 var ngTweet = require("../../lib/ngTweet/ngtweet.min.js");
 var logger = require("angular-simple-logger");
@@ -17,21 +17,51 @@ var directives = require("./directives");
 var controllers = require("./controllers");
 
 var CFApp = angular.module("CFApp", [
-	'ngRoute',
 	'CFControllers',
 	'CFDirectives',
 	'CFServices',
 	'ngSanitize',
 	'ngtweet',
 	'uiGmapgoogle-maps',
-	'LocalStorageModule'
+	'LocalStorageModule',
+	'ui.router'
 ]);
 
-CFApp.config(['uiGmapGoogleMapApiProvider',
-	function(uiGmapGoogleMapApiProvider) {
+CFApp.config(function(uiGmapGoogleMapApiProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
+
+		// Define Routes
+		$locationProvider.html5Mode({
+		  enabled: true,
+		  requireBase: false
+		});
+		$urlRouterProvider.otherwise('/');
+
+		$stateProvider
+			.state('home', {
+				url: '/',
+				template: require('./partials/home.html'),
+				controller: 'HomeCtrl',
+				controllerAs: 'Home'
+			})
+			.state('map', {
+				url: '/map',
+				template: require('./partials/maps.html'),
+				controller: 'MapCtrl',
+				controllerAs: 'Map'
+			})
+			.state('userTweets', {
+				url: '/userTweets',
+				template: require('./partials/userTweets.html'),
+				controller: 'TwitterCtrl',
+				controllerAs: 'Twitter'
+			})
+
+
 		uiGmapGoogleMapApiProvider.configure({
 			key: 'AIzaSyBPxhG-Mj99rpgKrC9y9RESEc-TOKLJd5s',
 			v: '3.23',
 			libraries: 'weather,geometry,visualization'
 		})
-	}]);
+
+
+	});
