@@ -6,6 +6,7 @@
     <title>Coding Counterfactuals</title>
     <meta name="description" content="Senior Design UPenn 2016">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="bower_modules/ngtweet/dist/ngtweet.min.jsaa"></script> 
   </head>
   <body class="container" ng-controller="TwitterCtrl">
     <div class="jumbotron">
@@ -44,4 +45,22 @@
       </div>
     </div>
   </body>
+  <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+     
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+ 
+      return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
 </html>

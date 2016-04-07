@@ -31,13 +31,17 @@ if (isDeveloping) {
 
 	app.use(middleware);
 	app.use(webpackHotMiddleware(compiler));
-	app.get('*', function response(req, res) {
+	app.get('/', function response(req, res) {
 	    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
+	    res.end();
+	});
+	app.get('/login', function response(req, res) {
+	    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/login.html')));
 	    res.end();
 	});
 
 
-	const sshConfig = {
+	/*const sshConfig = {
 		host: '128.91.79.105',
 		dstPort: 3306,
 	    username: 'joeraso',
@@ -65,19 +69,23 @@ if (isDeveloping) {
 		});
 
 		connection.end();
-    });
+    });*/
 
 	
 
 }
 else {
   app.use(express.static(__dirname + '/dist'));
-  app.get('*', function response(req, res) {
+  app.get('/', function response(req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
+  app.get("/login", function(req, res) {
+  	res.sendFile(path.join(__dirname, 'dist/login.html'));
+  });
+  app.get("/maps", function(req, res) {
+  	res.sendFile(path.join(__dirname, 'dist/maps.html'));
+  })
 }
-
-
 
 
 app.listen(port, '0.0.0.0', function (err) {
