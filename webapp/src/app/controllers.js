@@ -1,11 +1,11 @@
 'use strict';
 
 var Twitter = require('twitter-node-client').Twitter;
-var PythonShell = require('python-shell');
 var $ = require("jquery");
+var _ = require("lodash");
 
 
-var CFControllers = angular.module('CFControllers', ['ngtweet']); // this is the app
+var CFControllers = angular.module('CFControllers', []); // this is the app
 
 // callback function
 var error = function (err, response, body) {
@@ -15,14 +15,22 @@ var error = function (err, response, body) {
 // Home Controller
 CFControllers.controller('HomeCtrl', ['$scope',
 	function($scope) {
-		
+		console.log("In home");
 	}]);
 
 // Map Controller
 CFControllers.controller('MapCtrl', ['$scope',
 	function($scope) {
-		$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-	}])
+		console.log("In Map");
+
+		$scope.map = { 
+			center: { 
+				latitude: 45, 
+				longitude: -73 
+			}, 
+			zoom: 8 
+		};
+	}]);
 
 // Twitter User Controller
 CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, localStorageService) {
@@ -30,6 +38,7 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, loc
 	twitterService.initialize();
 
 	$scope.refreshTimeline = function(maxID) {
+		console.log("refreshing");
 		twitterService.getLatestTweets(maxID).then(function(data) {
 			$scope.tweets = $scope.tweets.concat(data);
 			localStorageService.set("tweets", $scope.tweets);
@@ -41,7 +50,23 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, loc
 		}, function() {
 			$scope.rateLimitError = true;
 		});
-	}
+	};
+
+	/*$scope.filterCounterfactuals = function(tweet) {
+		var options = {
+			args: [tweet.text],
+			scriptPath: '../../../python/',
+			pythonPath: 'C://Users/alleg/Anaconda2/python'
+		};
+
+		PythonShell.run('getCFFromTagged.py', options, function(err, result) {
+			if(!err) {
+				return result > 0;
+			} else {
+				console.log(err);
+			}
+		});
+	};*/
 
 	$scope.connectButton = function() {
 		twitterService.connectTwitter().then(function() {
