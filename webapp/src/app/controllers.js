@@ -40,12 +40,9 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, loc
 	$scope.refreshTimeline = function(maxID) {
 		console.log("refreshing");
 		twitterService.getLatestTweets(maxID).then(function(data) {
+			console.log(data[0].text);
 			$scope.tweets = $scope.tweets.concat(data);
 			localStorageService.set("tweets", $scope.tweets);
-
-			$scope.tweets.forEach(function(element, index) {
-				console.log(element);
-			})
 			
 		}, function() {
 			$scope.rateLimitError = true;
