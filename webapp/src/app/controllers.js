@@ -43,21 +43,6 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, loc
 		});
 	}
 
-	$scope.filterCounterfactuals = function(tweet) {
-		var options = {
-			args = [tweet.text],
-			scriptPath = '../../../python/',
-			pythonPath = 'C://Users/alleg/Anaconda2/python',
-		};
-		PythonShell.run('getCFFromTagged.py', options, function(err, result) {
-			if(!err) {
-				return result > 0;
-			} else {
-				console.log(err);
-			}
-		})
-	}
-
 	$scope.connectButton = function() {
 		twitterService.connectTwitter().then(function() {
 			if (twitterService.isReady()) {

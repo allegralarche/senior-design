@@ -78,4 +78,5 @@ def main(argv):
     tagset = None
     tokens = tokenize(line)
     tags = nltk.tag._pos_tag(tokens, tagset, tagger)
-    format_tagged(tags)
+    line = format_tagged(tags)
+    print(getForm(line))
