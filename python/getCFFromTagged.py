@@ -20,56 +20,7 @@ import array
 
 '''
 **** USAGE ****
-
 python getCFFromTagged.py tagged.txt labels.txt predicted.txt
-
-
-'''
-'''
-def identify(tagged_line):
-
-    # CASE 1 WISH VERB FORM
-    p1 = re.compile('\wish\/VB.*/', re.IGNORECASE)
-    if p1.search(tagged_line) != None:
-        # print("p1")
-        return True
-
-    # CASE 2 CONJUNTION NORMAL
-    p2 = re.compile('\.*((/CC/)|(/IN/)).*((/VBD/)|(/VBN/)|(/VB/)).*/MD/', re.IGNORECASE)
-    if p2.search(tagged_line) != None:
-        # print("p2")
-        return True
-
-    # CASE 3 CONJUNCTIVE CONVERSE
-    p3 = re.compile('\.*/MD/.*((/CC/)|(/IN/)).*((/VBN/)|(/VBD/)|(/VB/))', re.IGNORECASE)
-    if p3.search(tagged_line) != None:
-        # print("p3")
-        return True
-
-    # CASE 4 MODAL NORMAL
-    p4 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)|(/VB/)).*/MD/.*((/VBN/)|(/VBD/)|(/VB/))', re.IGNORECASE)
-    if p4.search(tagged_line) != None:
-        # print("p4")
-        return True
-
-    # CASE 6 HYPOTHETICAL NORMAL
-    # Key words: rather, imagine, envision, conceptualize, conjure up, visualize
-    p5 = re.compile('\.*((rather/)|(imagine/)|(envision/)|(conceptualize/)|(conjure/)|(visualize/)).*/VB.*/.*/MD/', re.IGNORECASE)
-    if p5.search(tagged_line) != None:
-        # print("p6")
-        return True
-
-    # CASE 6 VERB INVERSION
-    p6 = re.compile('\.*((were/)|(had/)).*((/NN/)|(/NNP/)|(/NNPS/)|(/NNS/)|(/PRP.*/)).*((/VBN/)|(/VBD/)|(/VB/)).*/MD/', re.IGNORECASE)
-    if p6.search(tagged_line) != None:
-        # print("p7")
-        return True
-
-    # CASE 7 MODAL PREPOSITIONAL
-    # p7 = "";
-
-    # If no matches
-    return False
 
 '''
 
@@ -81,6 +32,7 @@ def getForm(tagged_line):
     # pq = re.compile('\.*\?.*')
     # if p0.search(tagged_line) != None or pq.search(tagged_line) != None:
     #     return 0
+
 
     # Filter out questions
     pq = re.compile('\.*/\?/.', re.IGNORECASE)

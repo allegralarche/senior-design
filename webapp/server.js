@@ -1,18 +1,19 @@
 
 const path = require('path');
 const express = require('express');
+
 const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config.js');
-const mysql = require('mysql');
+const mysql = require('node-mysql');
 const sshTunnel = require('tunnel-ssh');
-const Twitter = require('twitter');
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
 const app = express();
 
+const pythonShell = require('python-shell');
 
 if (isDeveloping) {
 	const compiler = webpack(config);
@@ -31,13 +32,19 @@ if (isDeveloping) {
 
 	app.use(middleware);
 	app.use(webpackHotMiddleware(compiler));
-	app.get('*', function response(req, res) {
+
+
+	app.get('/', function response(req, res) {
 	    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
 	    res.end();
 	});
 
 
-	const sshConfig = {
+	app.post('/runScript', function response(req, res) {
+		console.log("Running Script");
+	})
+
+	/*const sshConfig = {
 		host: '128.91.79.105',
 		dstPort: 3306,
 	    username: 'joeraso',
@@ -65,26 +72,18 @@ if (isDeveloping) {
 		});
 
 		connection.end();
-    });
-
-	var client = new Twitter({
-		consumer_key: '	3vDKSh6NkZD5TYe4YSra5Vlws',
-		consumer_secret: '	2mJOtdrtaAzEsBcRCHBeCIaqbJaReF5IZS8zjEZTAliQiASh5D',
-		access_token_key: '363448613-TPHWxpzk69qJ4JbwOMeCORXucgB40Oq9bJxoKIBL',
-		access_token_secret: 'k9NpfGnrGLjBtui2Ay7E3kC7JDeC5sO1g6BWrouL2CbNr'
-	});
+    });*/
 
 	
 
 }
 else {
   app.use(express.static(__dirname + '/dist'));
-  app.get('*', function response(req, res) {
+
+  app.get('/', function response(req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
 }
-
-
 
 
 app.listen(port, '0.0.0.0', function (err) {
