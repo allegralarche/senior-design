@@ -6,6 +6,8 @@ from datetime import date, datetime, timedelta
 from sklearn.metrics import classification_report
 from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import accuracy_score
+import numpy
+import scipy
 import mysql.connector
 import traceback
 import nltk
@@ -80,8 +82,13 @@ def getForm(tagged_line):
     # if p0.search(tagged_line) != None or pq.search(tagged_line) != None:
     #     return 0
 
+    # Filter out questions
+    pq = re.compile('\.*/\?/.', re.IGNORECASE)
+    if pq.search(tagged_line) != None:
+        return 0
+
     # CASE 1 WISH VERB FORM
-    p1 = re.compile('\.*(wish|wishing)/(VB.*/|JJ/)', re.IGNORECASE)
+    p1 = re.compile('\.*(wish|wishing)/((VB.*/)|(JJ/))', re.IGNORECASE)
     if p1.search(tagged_line) != None:
         return 1
 
@@ -97,35 +104,24 @@ def getForm(tagged_line):
     if p3.search(tagged_line) != None:
         return 3
 
-    # CASE 4 MODAL NORMAL
-    p4 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)).*/MD/.*((/VBN/)|(/VBD/)|(/VB/)|(VBZ))', re.IGNORECASE)
+
+    # CASE 5 Should have
+    p4 = re.compile('\.*/((should\'ve)/MD/)|(((should)|(shoulda)(shulda)|(shuda)|(shudda)|(shudve))/MD/((have)|(hve)|(ve))/)(\w)*((/VBN/)|(/VBD/))', re.IGNORECASE)
     if p4.search(tagged_line) != None:
         return 4
 
-    # CASE 4 MODAL NORMAL
-    # p4 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)).*/MD/.*((/VBN/)|(/VBD/))', re.IGNORECASE)
-    # if p4.search(tagged_line) != None:
-    #    return 4
-
-
-    # CASE  HYPOTHETICAL NORMAL -> now included in CCJ
-    # Key words: rather, imagine, envision, conceptualize, conjure up, visualize
-
-
-    # CASE 5 Should have
-    p5 = re.compile('\.*/((should)|(shoulda)(shulda)|(shuda)|(shudda)|(shudve))/MD/((have)|(hve)|(ve))/(\w)*((/VBN/)|(/VBD/))', re.IGNORECASE)
+    # CASE 6 VERB INVERSION
+    p5 = re.compile(("\.*(had/(\w)*/(\w)*((/NN/)|(/NNP/)|(/NNPS/)|(/NNS/)|(/PRP/)).*((/VBN/)|(/VBD/)).*/MD/)"
+                    "|(were/(\w)*/(\w)*((/NN/)|(/NNP/)|(/NNPS/)|(/NNS/)|(/PRP/)).*/MD/)"
+                    "|(/MD/.*/VB.*/had/(\w)*/(\w)*((/NN/)|(/NNP/)|(/NNPS/)|(/NNS/)|(/PRP/)).*((/VBN/)|(/VBD/)))"), re.IGNORECASE)
     if p5.search(tagged_line) != None:
         return 5
 
-    # CASE 6 VERB INVERSION
-    p6 = re.compile('\.*((were/)|(had/)).*((/NN/)|(/NNP/)|(/NNPS/)|(/NNS/)|(/PRP.*/)).*((/VBN/)|(/VBD/)).*/MD/', re.IGNORECASE)
+
+    # CASE 6 MODAL NORMAL
+    p6 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)).*/MD/.*((/VBN/)|(/VBD/)|(/VB/)|(VBZ))', re.IGNORECASE)
     if p6.search(tagged_line) != None:
         return 6
-
-    # CASE 7 MODAL Adverb Comparative
-    p7 = re.compile('\.*/MD/.*((/VBN/)|(/VBD/)|(/VB/)).*/RBR/.*/MD/.*((/VBN/)|(/VBD/)|(/VB/))', re.IGNORECASE)
-    if p7.search(tagged_line) != None:
-        return 7
 
     # If no matches
     return 0
@@ -145,7 +141,7 @@ def main(argv):
     report_file = open('report.txt', 'w')
     label_file = open(str(sys.argv[2]), 'r')
 
-    form_num = 8
+    form_num = 7
 
     cf_count = [[0 for x in range(form_num)] for x in range(form_num)]
 
@@ -195,12 +191,16 @@ def main(argv):
     accuracy = accuracy_score(y_true, y_pred)
     precision, recall, thresholds = precision_recall_curve(y_true, y_pred)
 
+    pearson_corr = scipy.stats.pearsonr(y_true, y_pred)
+
     count = 0
     for i in xrange(1,form_num):
         count = count + cf_count[i][0]
 
     report_file.write("Identified " + str(count) + " Counterfactuals \n")
     report_file.write("Accuracy: %0.4f \n" % accuracy)
+    report_file.write("pearson corr: %0.4f \n" % pearson_corr[0])
+    report_file.write("p-val: %0.4f \n" % pearson_corr[1])
     report_file.write("Precision: %0.4f \n" % precision[1])
     report_file.write("Recall: %0.4f \n" % recall[1])
 
