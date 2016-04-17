@@ -44,7 +44,7 @@ if (isDeveloping) {
 		res.send("It Worked!");
 	});
 
-	/*const sshConfig = {
+	const sshConfig = {
 		host: '128.91.79.105',
 		dstPort: 3306,
 	    username: 'joeraso',
@@ -58,7 +58,7 @@ if (isDeveloping) {
 		  host     : 'localhost',
 		  user     : 'root',
 		  password : '',
-		  database : 'twitterGH'
+		  database : 'counterfactuals'
 		});
 		connection.connect();
 
@@ -72,12 +72,13 @@ if (isDeveloping) {
 		});
 
 		connection.end();
-    });*/
+    });
 
 	
 
 }
 else {
+
   app.use(express.static(__dirname + '/dist'));
 
   app.get('/', function response(req, res) {
