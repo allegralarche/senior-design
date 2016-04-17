@@ -39,10 +39,12 @@ CFServices.factory('twitterService', function($q) {
 		},
 		getLatestTweets: function(maxId) {
 			var deferred = $q.defer();
-			var url = '/1.1/statuses/home_timeline.json';
+			var url = '/1.1/statuses/user_timeline.json?';
 			if (maxId) {
-				url += '?max_id=' + maxId;
+				url += 'max_id=' + maxId + '&';
 			}
+			url += "include_rts=false";
+			console.log(url);
 			var promise = authorizationResult.get(url).done(function(data) {
 				deferred.resolve(data);
 			}).fail(function(err) {

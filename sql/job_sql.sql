@@ -1,0 +1,1 @@
+SELECT message_id, message, cnty FROM msgs_2012;

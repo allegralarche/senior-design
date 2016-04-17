@@ -7,6 +7,7 @@ import mysql.connector
 import traceback
 import nltk
 import sys
+import unicodedata
 
 
 '''
@@ -22,7 +23,7 @@ def main(argv):
     # private_key_file = ''
 
     if len(sys.argv) != 4:
-        print("Usage:> python getSQLfile.py username queryfile.sql outfile.txt")
+        print("Usage:> python getTweetsFromSQL.py username queryfile.sql outfile.txt")
         exit()
 
     username = str(sys.argv[1])
@@ -32,7 +33,6 @@ def main(argv):
     qfile = open(queryfile, 'r')
     query = qfile.read()
 
-    # my code here
     cnx = mysql.connector.connect(host='127.0.0.1', port=3306, user=username, db="randomTwitter_by_month")
     print("Connected to database")
 
@@ -45,7 +45,13 @@ def main(argv):
     cursor.execute(query)
     for message in cursor:
         # format and write string
-        f.write(str(message)[3:-3])
+        # print(message[0])
+        m = message[0]
+        # m.replace
+        m = m.replace('\n', ' ')
+        m = m.encode('ascii', 'ignore')
+        f.write(m)
+        # f.write(str(message)[3:-3])
         f.write("\n")
 
     # close file and connection
