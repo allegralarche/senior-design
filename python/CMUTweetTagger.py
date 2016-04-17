@@ -95,5 +95,14 @@ if __name__ == "__main__":
     if success:
         print "Success."
         print "Now pass in two messages, get a list of tuples back:"
-        tweets = ['this is a message', 'and a second message']
-        print runtagger_parse(tweets)
+
+
+        f = open("newTweets.txt", "r")
+        tweets = []
+        for line in f:
+            tweets.append(line)
+
+        taggedTweets = runtagger_parse(tweets)
+        taggedFile = open("taggedTweets.txt", "w")
+        for taggedTweet in taggedTweets:
+            taggedFile.write("%s\n" % taggedTweet)
