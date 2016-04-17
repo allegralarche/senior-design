@@ -40,9 +40,9 @@ if (isDeveloping) {
 	});
 
 
-	app.post('/runScript', function response(req, res) {
-		console.log("Running Script");
-	})
+	app.get('/filterTweets', function response(req, res) {
+		res.send("It Worked!");
+	});
 
 	/*const sshConfig = {
 		host: '128.91.79.105',
@@ -82,6 +82,10 @@ else {
 
   app.get('/', function response(req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
+  });
+
+  app.get('/filterTweets', function response(req, res) {
+	res.send("It Worked!");
   });
 }
 
