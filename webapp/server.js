@@ -1,7 +1,7 @@
 
 const path = require('path');
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
@@ -10,10 +10,17 @@ const mysql = require('node-mysql');
 const sshTunnel = require('tunnel-ssh');
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 3000 : process.env.PORT;
+const port = isDeveloping ? 8080 : process.env.PORT;
 const app = express();
 
 const pythonShell = require('python-shell');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.post('/filterTweets', function response(req, res) {
+	
+	res.send(req.body.tweets); // just send back tweets for now
+});
 
 if (isDeveloping) {
 	const compiler = webpack(config);
@@ -40,11 +47,9 @@ if (isDeveloping) {
 	});
 
 
-	app.get('/filterTweets', function response(req, res) {
-		res.send("It Worked!");
-	});
 
-	const sshConfig = {
+
+/*	const sshConfig = {
 		host: '128.91.79.105',
 		dstPort: 3306,
 	    username: 'joeraso',
@@ -72,7 +77,7 @@ if (isDeveloping) {
 		});
 
 		connection.end();
-    });
+    }); */
 
 	
 
@@ -85,9 +90,7 @@ else {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
 
-  app.get('/filterTweets', function response(req, res) {
-	res.send("It Worked!");
-  });
+
 }
 
 

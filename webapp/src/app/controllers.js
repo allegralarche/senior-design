@@ -38,23 +38,25 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, $http, twitterServi
 	twitterService.initialize();
 
 	$scope.refreshTimeline = function(maxID) {
-		console.log("refreshing");
-		twitterService.getLatestTweets(maxID).then(function success(data) {
-			$scope.tweets = $scope.tweets.concat(data);
-			localStorageService.set("tweets", $scope.tweets);
+		console.log("getting tweets");
+		twitterService.getLatestTweets(maxID).then(function success(data) { // returns array of tweet objects
+			$http({
+				method: "POST",
+				url: "/filterTweets",
+				data: {tweets : data}
+			}).then(function success(response) {
+				console.log("success");
+				$scope.tweets = $scope.tweets.concat(data);
+				localStorageService.set("tweets", $scope.tweets);
+			}, function error(response) {
+				console.log('error: ' + response.statusText);
+			});
 			
 		}, function error() {
 			$scope.rateLimitError = true;
 		});
 	};
 
-	$scope.filterCounterfactuals = function(tweet) {
-		$http.post('/filterTweets').then(function success(response) {
-			console.log(response.data);
-		}, function error(response) {
-			console.log('error: ' + response.statusText);
-		});
-	};
 
 	$scope.connectButton = function() {
 		twitterService.connectTwitter().then(function() {
@@ -85,6 +87,8 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, $http, twitterServi
         $scope.connectedTwitter = true;
         $scope.refreshTimeline();
 	};
+
+
 
 });
 

@@ -4,10 +4,9 @@
   "description": "Senior Design Project on Counterfactual Classification of Tweets",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
-    "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "npm run server"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
     "angular-sanitize": "^1.5.3",
     "angular-simple-logger": "^0.1.7",
     "angular-ui-router": "^1.0.0-alpha.4",
+    "body-parser": "^1.15.0",
     "bootstrap": "^3.3.6",
     "jquery": "^2.2.2",
     "lodash": "^4.8.2",
