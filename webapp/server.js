@@ -15,10 +15,27 @@ const app = express();
 
 const pythonShell = require('python-shell');
 
+// need bodyParser for post requests 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.post('/filterTweets', function response(req, res) {
-	
+	var tweets = req.body.tweets // array of tweet objects
+	var filteredTweets = [];
+	for(var i in tweets) {
+		var tweet = tweets[i].text;
+		var pythonOptions = {
+			scriptPath: '../python',
+			args: [tweet]
+		}
+		pythonShell.run('allegraScript.py', pythonOptions, function(err, results) {
+			if(err) {
+				throw err;
+			}
+			else {
+				filteredTweets.push(tweets[i]);
+			}
+		});
+	}
 	res.send(req.body.tweets); // just send back tweets for now
 });
 
