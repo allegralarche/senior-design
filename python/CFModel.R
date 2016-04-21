@@ -9,6 +9,9 @@ library(randomForest)
 library(RTextTools)
 library(tm)
 library(RWeka)
+library(RColorBrewer)
+library(wordcloud)
+
 
 rm(list=ls())
 dir <- "/Users/joeraso/Desktop/senior-design/python"
@@ -90,9 +93,31 @@ sum(results[,2] == 1 & results[,3] == 1) / sum(results[,2] == 1)
 
 
 ### Text mining
+text <- read.csv("/Users/joeraso/Desktop/counterfactual_messages.csv")
 text <- CF$tweet
 mycorpus1 <- VCorpus( VectorSource(text))
+mycorpus1<- tm_map(mycorpus1, removeWords, stopwords("english"))
 
+
+dtm1 <- DocumentTermMatrix(mycorpus1)
+
+dtm.10.2 <- removeSparseTerms(dtm1, .99)
+colnames(dtm.10.2)
+
+threshold=.01*length(mycorpus1)
+words.10 <- findFreqTerms(dtm1, lowfreq=1600)
+words.10
+
+colnames(dtm1)
+freqs <- c()
+cols <- colnames(dtm1)
+for (i in 1:795) {
+  freqs[i] <- (sum(as.matrix(dtm1[,i])))
+}
+val <- data.frame(freqs, cols)
+cor.special=brewer.pal(8,"Dark2")  # set up a pretty color scheme
+wordcloud(val$cols, val$freqs,  # make a word cloud
+          colors=cor.special, ordered.colors=F)
 
 write.table(results, file = "results.csv", append = FALSE, quote=FALSE, sep=",", row.names=FALSE)
 

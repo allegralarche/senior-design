@@ -6,20 +6,19 @@ const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config.js');
-const mysql = require('node-mysql');
-const sshTunnel = require('tunnel-ssh');
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 3000 : process.env.PORT;
+const port = isDeveloping ? 8080 : process.env.PORT;
 const app = express();
 
 const pythonShell = require('python-shell');
+
 
 if (isDeveloping) {
 	const compiler = webpack(config);
 	const middleware = webpackMiddleware(compiler, {
 	    publicPath: config.output.publicPath,
-	    contentBase: 'src',
+	    contentBase: './src',
 	    stats: {
 	      colors: true,
 	      hash: false,
@@ -30,9 +29,15 @@ if (isDeveloping) {
 	    }
 	});
 
+
 	app.use(middleware);
 	app.use(webpackHotMiddleware(compiler));
 
+
+	app.get('/api/runScript', function response(req, res) {
+		console.log("Running Script");
+		res.end();
+	});
 
 	app.get('/', function response(req, res) {
 	    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
@@ -40,11 +45,7 @@ if (isDeveloping) {
 	});
 
 
-	app.post('/runScript', function response(req, res) {
-		console.log("Running Script");
-	})
-
-	const sshConfig = {
+	/*const sshConfig = {
 		host: '128.91.79.105',
 		dstPort: 3306,
 	    username: 'joeraso',
@@ -72,7 +73,7 @@ if (isDeveloping) {
 		});
 
 		connection.end();
-    });
+    });*/
 
 	
 
@@ -80,6 +81,10 @@ if (isDeveloping) {
 else {
 
   app.use(express.static(__dirname + '/dist'));
+
+   app.get('/api/runScript', function response(req, res) {
+	console.log("Running Script");
+  });
 
   app.get('/', function response(req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));

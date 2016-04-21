@@ -23,40 +23,40 @@ def pullFeatures(tagged_line, rawTweet, CF):
     for sentence in sentences:
         # Check if the tweet just has if and a past tense verb
         ifMod = re.compile("('if').*('VBD'|'VBN')", re.IGNORECASE)
-        if ifMod.search(tagged_line) != None and CF == "1":
-            features[2] = 2
+        if ifMod.search(tagged_line) != None:
+            features[2] = 1
 
         # Check if the tweet has a model followed by if
         modIf = re.compile("('MD').*('VBD'|'VBN').*('CCJ')", re.IGNORECASE)
-        if modIf.search(tagged_line) != None and CF == "1":
+        if modIf.search(tagged_line) != None:
             features[3] = 1
 
 
         # Check if the tweet contains wish
         wish = re.compile("('wish'|'wished'|'wishing').*('VBD'|'VBN'|'VB'|MD')", re.IGNORECASE)
-        if wish.search(tagged_line) != None and CF == "1":
-            features[4] = 4
+        if wish.search(tagged_line) != None:
+            features[4] = 1
 
         # Check if the tweet has a past tense verb followed by a modal
         conjNorm = re.compile("('VBD'|'VBN').*('MD')", re.IGNORECASE)
-        if conjNorm.search(tagged_line) != None and CF == "1":
-            features[5] = 2
+        if conjNorm.search(tagged_line) != None:
+            features[5] = 1
 
         # CASE 4 MODAL NORMAL
         modNorm = re.compile("('MD').*('VBN'|'VBD')", re.IGNORECASE)
-        if modNorm.search(tagged_line) != None and CF == "1":
-            features[6] = 4
+        if modNorm.search(tagged_line) != None:
+            features[6] = 1
 
         # verb inversion
         vbInv = re.compile("('were'|'had').*('VBN'|'VBD')", re.IGNORECASE)
-        if vbInv.search(tagged_line) != None and CF == "1":
-            features[7] = 2
+        if vbInv.search(tagged_line) != None:
+            features[7] = 1
 
 
         # MD have
         mdHave = re.compile("('MD').*('have')", re.IGNORECASE)
-        if mdHave.search(tagged_line) != None and CF == "1":
-            features[8] = 0.6
+        if mdHave.search(tagged_line) != None:
+            features[8] = 1
 
         
     return features

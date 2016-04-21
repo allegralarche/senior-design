@@ -33,7 +33,7 @@ CFControllers.controller('MapCtrl', ['$scope',
 	}]);
 
 // Twitter User Controller
-CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, localStorageService) {
+CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, localStorageService, $http) {
 	$scope.tweets = [];
 	twitterService.initialize();
 

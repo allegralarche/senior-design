@@ -54,8 +54,7 @@ CFApp.config(function(uiGmapGoogleMapApiProvider, $stateProvider, $urlRouterProv
 				template: require('./partials/userTweets.html'),
 				controller: 'TwitterCtrl',
 				controllerAs: 'Twitter'
-			})
-
+			});
 
 		uiGmapGoogleMapApiProvider.configure({
 			key: 'AIzaSyBPxhG-Mj99rpgKrC9y9RESEc-TOKLJd5s',
