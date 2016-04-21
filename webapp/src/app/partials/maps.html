@@ -1,26 +1,35 @@
 <div layout="column" ng-cloak class="md-inline-form" layout-align="center">
-  <md-content layout-gt-sm="row" layout-align="center" layout-padding md-theme="docs-dark">
+  <md-content  layout-align="center" layout-padding md-theme="docs-dark">
       <div class="md-whiteframe-2dp" layout-fill>
         <md-toolbar>
           <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Settings">
+            <md-button class="md-icon-button" aria-label="Settings" ui-sref="home">
               <md-icon md-font-library="material-icons" ng-style="{'font-size': '25px'}">navigate_before</md-icon>
             </md-button>
             <h1> Select a Location and Time Range:</h1>
           </div>
         </md-toolbar>
-        <md-input-container>
-          <label>State</label>
-          <md-select ng-model="state">
-            <md-option ng-repeat="state in states" value="{{state}}">
-              {{state}}
-            </md-option>
-          </md-select>
-        </md-input-container>
-        <md-datepicker ng-model="startDate" md-min-date="minStartDate" md-max-date="maxStartDate" md-placeholder="Enter Start date"></md-datepicker>
-        <md-datepicker ng-model="endDate" md-placeholder="Enter End date"></md-datepicker>
-        <md-button class="md-raised md-primary">Search</md-button>
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+        <div layout-fill >
+          <md-input-container flex-offset="5">
+            <label>State</label>
+            <md-select ng-model="state">
+              <md-option ng-repeat="state in states" value="{{state}}">
+                {{state}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+          <md-datepicker ng-model="startDate" md-min-date="minStartDate" md-max-date="maxStartDate" md-placeholder="Enter Start date"></md-datepicker>
+          <md-datepicker ng-model="endDate" md-placeholder="Enter End date"></md-datepicker>
+          <md-button class="md-raised md-primary" ng-click="getPercents()">Search</md-button>
+        </div>
+        <ui-gmap-google-map center="map.center" zoom="map.zoom">
+          <ui-gmap-markers
+            idKey="'keyId'" 
+            models="markers"
+            coords="'self'"
+            >
+          </ui-gmap-markers>
+        </ui-gmap-google-map>
       </div>
   </md-content>
 </div>

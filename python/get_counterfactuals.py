@@ -14,7 +14,6 @@ import counterfactualMethods
 
 
 
-
 def main(argv):
     sql_after = "select message from msgs_2013_04 where created_time > '2013-04-16 00:00:00' and created_time < '2013-04-30 23:59:59' and state='MA'" 
 

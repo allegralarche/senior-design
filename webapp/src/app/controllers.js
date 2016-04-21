@@ -1,6 +1,7 @@
 'use strict';
 
 var Twitter = require('twitter-node-client').Twitter;
+var dateFormat = require('dateformat');
 var $ = require("jquery");
 var _ = require("lodash");
 
@@ -19,32 +20,19 @@ CFControllers.controller('HomeCtrl', ['$scope',
 	}]);
 
 // Map Controller
-CFControllers.controller('MapCtrl', ['$scope',
-	function($scope) {
+CFControllers.controller('MapCtrl', ['$scope', '$http',
+	function($scope, $http) {
 
 		var today = new Date();
 
 		// Start Date
-  		$scope.minStartDate = new Date(
-      	today.getFullYear(),
-      	today.getMonth(),
-      	today.getDate() - 4);
-
-  		$scope.maxStartDate = new Date(
-      	today.getFullYear(),
-      	today.getMonth(),
-      	today.getDate());
+		$scope.minStartDate = new Date(2012, 0, 0, 0, 0, 0, 0)
+  		$scope.maxStartDate = new Date(2015, 0, 0, 0, 0, 0, 0)
 
   		// End Date
-  		$scope.minEndDate = new Date(
-      	today.getFullYear(),
-      	today.getMonth(),
-      	today.getDate());
+  		$scope.minEndDate = new Date(2012, 0, 0, 0, 0, 0, 0)
+  		$scope.maxEndDate = new Date(2015, 0, 0, 0, 0, 0, 0)
 
-  		$scope.maxEndDate = new Date(
-      	today.getFullYear(),
-      	today.getMonth() + 2,
-      	today.getDate());
   
   		$scope.states = [
 	        "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID",
@@ -54,17 +42,48 @@ CFControllers.controller('MapCtrl', ['$scope',
 	        "WI","WY"	      
 	    ];
 
+	    $scope.markers = []
 		$scope.map = { 
 			center: { 
-				latitude: 45, 
-				longitude: -73 
+				latitude: 42.4, 
+				longitude: -76
 			}, 
-			zoom: 8 
+			zoom: 7 
 		};
 
-		$scope.showsizes = function() {
-			console.log($scope.state);
-		}
+		$scope.getPercents = function() {
+
+			$scope.endDate = new Date(
+				$scope.endDate.getFullYear(),
+				$scope.endDate.getMonth(),
+				$scope.endDate.getDate() + 1);
+
+			console.log($scope.startDate);
+			console.log($scope.endDate);
+
+			var timeOne = dateFormat($scope.startDate, 'yyyy-mm-dd HH:MM:ss');
+			var timeTwo = dateFormat($scope.endDate, 'yyyy-mm-dd HH:MM:ss');
+
+			$http({
+				method: "POST",
+				url: "http://localhost:3000/getPercents",
+				data: {
+					state: $scope.state,
+					timeOne: timeOne,
+					timeTwo: timeTwo
+				}
+			}).then(function success(response) { // response is object with fields one and two
+				console.log("success:" + response.data);
+
+				for (var i = 0; i < response.data.length; i++) {
+					response.data[i].keyId = i;
+					console.log(response.data[i]);
+				}
+				$scope.markers = response.data;
+			}, function error(response) {
+				console.log('error: ' + response.statusText);
+			});
+		};
 	}]);
 
 // Twitter User Controller
