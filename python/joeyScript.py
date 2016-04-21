@@ -28,10 +28,9 @@ def getPercents(cursor, tagger):
     return cf_total/tweet_total
 
 
-# args: county start_time middle end_time
+# args: county start_time end_time
 def main(argv):
     sql_before = "select message from msgs_2013_04 where cnty=" + argv[0] + " and created_time > '" + argv[1] + "' and created_time < '" + argv[2]"'" 
-    sql_after = "select message from msgs_2013_04 where cnty=" + argv[0] + " and created_time > '" + argv[2] + "' and created_time < '" + argv[3]"'" 
 
 
 
@@ -47,14 +46,6 @@ def main(argv):
 
     print(getPercents(cursor, tagger))
 
-
-
-
-    cursor = cnx.cursor()
-    cursor.execute(sql_after)
-
-
-    print(getPercents(cursor, tagger))
 
 if __name__ == "__main__":
     main(sys.argv[1:])

@@ -1,6 +1,7 @@
 'use strict';
 
 var Twitter = require('twitter-node-client').Twitter;
+var dateFormat = require('dateformat');
 var $ = require("jquery");
 var _ = require("lodash");
 
@@ -47,28 +48,23 @@ CFControllers.controller('MapCtrl', ['$scope',
 			zoom: 8 
 		};
 
-		$scope.getCounty = function() {
-
-		};
-
-		$scope.getTime = function() {
-
-		};
 
 		$scope.getPercents = function() {
-			var county = $scope.getCounty();
-			var time = $scope.getTime();
+			var timeOne = dateFormat($scope.timeOne, 'yyyy-mm-dd HH:MM:ss');
+			var timeOne = dateFormat($scope.timeTwo, 'yyyy-mm-dd HH:MM:ss');
+			var county = $scope.county();
 
 			$http({
 				method: "POST",
 				url: "/getPercents",
 				data: {
 					county: county,
-					time: time,
+					timeOne: timeOne,
+					timeTwo: timeTwo
 				}
 			}).then(function success(response) { // response is object with fields one and two
-				$scope.percentOne = response.data.one;
-				$scope.percentTwo = response.data.two;
+				console.log("success:" + response.data);
+				$scope.percentOne = response.data;
 			}, function error(response) {
 				console.log('error: ' + response.statusText);
 			});
