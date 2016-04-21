@@ -1,32 +1,26 @@
-<div class="col-xs-12">
-  <div class="row">
-    <h1>
-      Select a date, time, and location to see counterfactual usage during that time span
-    </h1>
-  </div>
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-    </div>
-  </div>
-  <div class="row">
-    <h1>Select A Predefined Event:</h1>
-    <ul class="list-group">
-      <li class="list-group-item">Boston Marathon</li>
-      <li class="list-group-item">Brussels Bomber</li>
-      <li class="list-group-item">Paris Shooting</li>
-    </ul>
-  </div>
-  <div class="row text-center">
-    <h1> Select a specific date and time:</h1>
-    <div class="calendar">Some sort of calendar widget 1</div>
-    <div class="calendar">Some sort of calendar widget 2</div>
-    <md-content>
-      <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
-    </md-content>
-    
-    <button class="btn btn-info" ui-sref="home">
-      Back Home
-    </button>
-  </div>
+<div layout="column" ng-cloak class="md-inline-form" layout-align="center">
+  <md-content layout-gt-sm="row" layout-align="center" layout-padding md-theme="docs-dark">
+      <div class="md-whiteframe-2dp" layout-fill>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Settings">
+              <md-icon md-font-library="material-icons" ng-style="{'font-size': '25px'}">navigate_before</md-icon>
+            </md-button>
+            <h1> Select a Location and Time Range:</h1>
+          </div>
+        </md-toolbar>
+        <md-input-container>
+          <label>State</label>
+          <md-select ng-model="state">
+            <md-option ng-repeat="state in states" value="{{state}}">
+              {{state}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-datepicker ng-model="startDate" md-min-date="minStartDate" md-max-date="maxStartDate" md-placeholder="Enter Start date"></md-datepicker>
+        <md-datepicker ng-model="endDate" md-placeholder="Enter End date"></md-datepicker>
+        <md-button class="md-raised md-primary">Search</md-button>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+      </div>
+  </md-content>
 </div>

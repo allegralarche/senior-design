@@ -12,8 +12,11 @@ var ngTweet = require("../../lib/ngTweet/ngtweet.min.js");
 var logger = require("angular-simple-logger");
 var angMaps = require("angular-google-maps");
 var localStorage = require("angular-local-storage");
-var angularMaterial = require("angular-material");
+var angularAnimate = require("angular-animate")
 var angularMessage = require("angular-messages");
+var angularAria = require("angular-aria");
+var angularMaterial = require("angular-material");
+
 
 var services = require("./services");
 var directives = require("./directives");
@@ -29,10 +32,10 @@ var CFApp = angular.module("CFApp", [
 	'LocalStorageModule',
 	'ui.router',
 	'ngMaterial',
-	'ngMessages'
+	'ngMessages',
 ]);
 
-CFApp.config(function(uiGmapGoogleMapApiProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
+CFApp.config(function(uiGmapGoogleMapApiProvider, $stateProvider, $urlRouterProvider, $locationProvider, $mdIconProvider) {
 
 		// Define Routes
 		$locationProvider.html5Mode({
@@ -65,7 +68,9 @@ CFApp.config(function(uiGmapGoogleMapApiProvider, $stateProvider, $urlRouterProv
 			key: 'AIzaSyBPxhG-Mj99rpgKrC9y9RESEc-TOKLJd5s',
 			v: '3.23',
 			libraries: 'weather,geometry,visualization'
-		})
+		});
+
+		
 
 
 	});

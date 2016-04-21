@@ -22,22 +22,37 @@ CFControllers.controller('HomeCtrl', ['$scope',
 CFControllers.controller('MapCtrl', ['$scope',
 	function($scope) {
 
-		$scope.myDate = new Date();
+		var today = new Date();
 
-  		$scope.minDate = new Date(
-      	$scope.myDate.getFullYear(),
-      	$scope.myDate.getMonth() - 2,
-      	$scope.myDate.getDate());
+		// Start Date
+  		$scope.minStartDate = new Date(
+      	today.getFullYear(),
+      	today.getMonth(),
+      	today.getDate() - 4);
 
-  		$scope.maxDate = new Date(
-      	$scope.myDate.getFullYear(),
-      	$scope.myDate.getMonth() + 2,
-      	$scope.myDate.getDate());
+  		$scope.maxStartDate = new Date(
+      	today.getFullYear(),
+      	today.getMonth(),
+      	today.getDate());
+
+  		// End Date
+  		$scope.minEndDate = new Date(
+      	today.getFullYear(),
+      	today.getMonth(),
+      	today.getDate());
+
+  		$scope.maxEndDate = new Date(
+      	today.getFullYear(),
+      	today.getMonth() + 2,
+      	today.getDate());
   
-  		$scope.onlyWeekendsPredicate = function(date) {
-    		var day = date.getDay();
-    		return day === 0 || day === 6;
-  		}
+  		$scope.states = [
+	        "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID",
+	        "IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS",
+	        "MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK",
+	        "OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV",
+	        "WI","WY"	      
+	    ];
 
 		$scope.map = { 
 			center: { 
@@ -46,6 +61,10 @@ CFControllers.controller('MapCtrl', ['$scope',
 			}, 
 			zoom: 8 
 		};
+
+		$scope.showsizes = function() {
+			console.log($scope.state);
+		}
 	}]);
 
 // Twitter User Controller
