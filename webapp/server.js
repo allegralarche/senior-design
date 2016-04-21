@@ -43,6 +43,23 @@ app.post('/filterTweets', function response(req, res) {
 	});
 });
 
+app.post('/getPercents', function response(req, res) {
+	var timeStart = // get 5 days before the time
+	var timeEnd = // get 5 days after the time
+	var pythonOptions = {
+		scriptPath: '../python',
+		args: [req.body.county, timeStart, req.body.time, timeEnd]
+	}
+	pythonShell.run('joeyScript.py', pythonOptions, function(err, results) {
+		if(err) {
+			throw err;
+		}
+		else {
+			res.send({one: results[0], two: results[1]});
+		}
+	});
+});
+
 
 if (isDeveloping) {
 	const compiler = webpack(config);

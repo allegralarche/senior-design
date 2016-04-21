@@ -46,6 +46,33 @@ CFControllers.controller('MapCtrl', ['$scope',
 			}, 
 			zoom: 8 
 		};
+
+		$scope.getCounty = function() {
+
+		};
+
+		$scope.getTime = function() {
+
+		};
+
+		$scope.getPercents = function() {
+			var county = $scope.getCounty();
+			var time = $scope.getTime();
+
+			$http({
+				method: "POST",
+				url: "/getPercents",
+				data: {
+					county: county,
+					time: time,
+				}
+			}).then(function success(response) { // response is object with fields one and two
+				$scope.percentOne = response.data.one;
+				$scope.percentTwo = response.data.two;
+			}, function error(response) {
+				console.log('error: ' + response.statusText);
+			});
+		};
 	}]);
 
 // Twitter User Controller
