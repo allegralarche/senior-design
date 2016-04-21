@@ -14,7 +14,6 @@ import counterfactualMethods
 
 
 
-
 def main(argv):
 
     limit_count = 31400

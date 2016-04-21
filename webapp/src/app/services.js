@@ -43,7 +43,7 @@ CFServices.factory('twitterService', function($q) {
 			if (maxId) {
 				url += 'max_id=' + maxId + '&';
 			}
-			url += "include_rts=false";
+			url += "include_rts=false&count=50";
 			console.log(url);
 			var promise = authorizationResult.get(url).done(function(data) {
 				deferred.resolve(data);
