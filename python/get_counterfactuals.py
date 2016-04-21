@@ -16,19 +16,6 @@ import counterfactualMethods
 
 
 def main(argv):
-    """
-    #year
-    for i in range(2012, 2016):
-        #month
-        for j in range(1, 13):
-            #day
-            if (j == 1):
-                for k in range(1,32):
-
-            elif (j == 3 || j == )
-            query = "select message from msgs_{}_{} where created_time > '2012-10-1 00:00:00 and created_time < '2012-10-31 23:50:59"
-    """
-
     sql_after = "select message from msgs_2013_04 where created_time > '2013-04-16 00:00:00' and created_time < '2013-04-30 23:59:59' and state='MA'" 
 
     if len(sys.argv) != 2:

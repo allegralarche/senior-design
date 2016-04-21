@@ -72,13 +72,7 @@ if (isDeveloping) {
 	app.get('/', function response(req, res) {
 	    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
 	    res.end();
-	});
-
-
-
-    });
-
-	
+	});	
 
 }
 else {

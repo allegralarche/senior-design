@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="row">
-    <h1> Select a specific date and time:</h1>
+    <h1>Select A Predefined Event:</h1>
     <ul class="list-group">
       <li class="list-group-item">Boston Marathon</li>
       <li class="list-group-item">Brussels Bomber</li>
@@ -21,6 +21,10 @@
     <h1> Select a specific date and time:</h1>
     <div class="calendar">Some sort of calendar widget 1</div>
     <div class="calendar">Some sort of calendar widget 2</div>
+    <md-content>
+      <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+    </md-content>
+    
     <button class="btn btn-info" ui-sref="home">
       Back Home
     </button>
