@@ -33,37 +33,33 @@ CFControllers.controller('MapCtrl', ['$scope',
 	}]);
 
 // Twitter User Controller
-CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, localStorageService, $http) {
+CFControllers.controller('TwitterCtrl', function($scope, $q, $http, twitterService, localStorageService) {
+
 	$scope.tweets = [];
 	twitterService.initialize();
 
 	$scope.refreshTimeline = function(maxID) {
-		console.log("refreshing");
-		twitterService.getLatestTweets(maxID).then(function(data) {
-			console.log(data[0].text);
-			$scope.tweets = $scope.tweets.concat(data);
-			localStorageService.set("tweets", $scope.tweets);
+		console.log("getting tweets");
+		$('#loading').show();
+		twitterService.getLatestTweets(maxID).then(function success(data) { // returns array of tweet objects
+			$http({
+				method: "POST",
+				url: "/filterTweets",
+				data: {tweets : data}
+			}).then(function success(response) {
+				console.log("success");
+				$('#loading').hide();
+				$scope.tweets = $scope.tweets.concat(response.data);
+				//localStorageService.set("tweets", $scope.tweets);
+			}, function error(response) {
+				console.log('error: ' + response.statusText);
+			});
 			
-		}, function() {
+		}, function error() {
 			$scope.rateLimitError = true;
 		});
 	};
 
-	/*$scope.filterCounterfactuals = function(tweet) {
-		var options = {
-			args: [tweet.text],
-			scriptPath: '../../../python/',
-			pythonPath: 'C://Users/alleg/Anaconda2/python'
-		};
-
-		PythonShell.run('getCFFromTagged.py', options, function(err, result) {
-			if(!err) {
-				return result > 0;
-			} else {
-				console.log(err);
-			}
-		});
-	};*/
 
 	$scope.connectButton = function() {
 		twitterService.connectTwitter().then(function() {
@@ -94,6 +90,8 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, twitterService, loc
         $scope.connectedTwitter = true;
         $scope.refreshTimeline();
 	};
+
+
 
 });
 

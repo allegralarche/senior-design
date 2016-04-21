@@ -24,6 +24,7 @@ def get_tagged_message(message, tagger):
 
 def get_cf_form(tagged_message):
 
+
     # Filter out questions
     pq = re.compile('\.*/\?/.', re.IGNORECASE)
     if pq.search(tagged_message) != None:
