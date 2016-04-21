@@ -19,24 +19,29 @@ const pythonShell = require('python-shell');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.post('/filterTweets', function response(req, res) {
-	var tweets = req.body.tweets // array of tweet objects
-	var filteredTweets = [];
+	var tweets = req.body.tweets; // array of tweet objects
+	var messages = [];
 	for(var i in tweets) {
-		var tweet = tweets[i].text;
-		var pythonOptions = {
-			scriptPath: '../python',
-			args: [tweet]
-		}
-		pythonShell.run('allegraScript.py', pythonOptions, function(err, results) {
-			if(err) {
-				throw err;
-			}
-			else {
-				filteredTweets.push(tweets[i]);
-			}
-		});
+		messages.push(tweets[i].text);
 	}
-	res.send(req.body.tweets); // just send back tweets for now
+	var pythonOptions = {
+		scriptPath: '../python',
+		args: messages
+	}
+	pythonShell.run('allegraScript.py', pythonOptions, function(err, results) {
+		if(err) {
+			throw err;
+		}
+		else {
+			var tbr = [];
+			for(var j in results) {
+				if(results[j] > 0) {
+					tbr.push(tweets[j]);
+				}
+			}
+			res.send(tbr);
+		}
+	});
 });
 
 if (isDeveloping) {

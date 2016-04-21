@@ -12,6 +12,7 @@
   </div>
   <div class="row">
     <div class="col-xs-12" id="results">
+      <p id="loading" style="display:none;">Loading tweets...</p>
       <div class="row" ng-repeat="t in tweets">
         <twitter-widget twitter-widget-id=t.id_str>
         </twitter-widget>

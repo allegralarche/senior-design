@@ -39,6 +39,7 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, $http, twitterServi
 
 	$scope.refreshTimeline = function(maxID) {
 		console.log("getting tweets");
+		$('#loading').show();
 		twitterService.getLatestTweets(maxID).then(function success(data) { // returns array of tweet objects
 			$http({
 				method: "POST",
@@ -46,8 +47,9 @@ CFControllers.controller('TwitterCtrl', function($scope, $q, $http, twitterServi
 				data: {tweets : data}
 			}).then(function success(response) {
 				console.log("success");
-				$scope.tweets = $scope.tweets.concat(data);
-				localStorageService.set("tweets", $scope.tweets);
+				$('#loading').hide();
+				$scope.tweets = $scope.tweets.concat(response.data);
+				//localStorageService.set("tweets", $scope.tweets);
 			}, function error(response) {
 				console.log('error: ' + response.statusText);
 			});
