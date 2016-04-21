@@ -5,7 +5,7 @@ var $ = require('jquery');
 
 var CFServices = angular.module('CFServices', []);
 
-CFServices.factory('twitterService', function($q) {
+CFServices.factory('twitterService', function($q, $http) {
 	var authorizationResult = false;
 
 	return {
@@ -13,6 +13,7 @@ CFServices.factory('twitterService', function($q) {
 			OAuth.initialize("qBQk0Pv2UEXWGcbiAuXIqO3-GEk", {
 				cache: true
 			});
+
 
 			authorizationResult = OAuth.create("twitter");
 		},

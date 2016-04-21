@@ -21,7 +21,23 @@ CFControllers.controller('HomeCtrl', ['$scope',
 // Map Controller
 CFControllers.controller('MapCtrl', ['$scope',
 	function($scope) {
-		console.log("In Map");
+
+		$scope.myDate = new Date();
+
+  		$scope.minDate = new Date(
+      	$scope.myDate.getFullYear(),
+      	$scope.myDate.getMonth() - 2,
+      	$scope.myDate.getDate());
+
+  		$scope.maxDate = new Date(
+      	$scope.myDate.getFullYear(),
+      	$scope.myDate.getMonth() + 2,
+      	$scope.myDate.getDate());
+  
+  		$scope.onlyWeekendsPredicate = function(date) {
+    		var day = date.getDay();
+    		return day === 0 || day === 6;
+  		}
 
 		$scope.map = { 
 			center: { 
@@ -34,6 +50,7 @@ CFControllers.controller('MapCtrl', ['$scope',
 
 // Twitter User Controller
 CFControllers.controller('TwitterCtrl', function($scope, $q, $http, twitterService, localStorageService) {
+
 	$scope.tweets = [];
 	twitterService.initialize();
 

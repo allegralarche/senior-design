@@ -15,12 +15,7 @@ import counterfactualMethods
 
 
 def main(argv):
-
-    limit_count = 31400
-    sql_before = "select message from msgs_2014_05 where (cnty = 6037 or cnty = 6083) and created_time > '2014-05-18 00:00:00' and created_time < '2014-05-22 23:59:59' LIMIT {}".format(limit_count)
-    sql_after = "select message from msgs_2014_05 where (cnty = 6037 or cnty = 6083) and created_time > '2014-05-23 00:00:00' and created_time < '2014-05-28 23:59:59' LIMIT {}".format(limit_count)
-
-    sql_year = "select message from msgs_2014 where (cnty = 6037 or cnty = 6083) limit {}".format(limit_count * 10)
+    sql_after = "select message from msgs_2013_04 where created_time > '2013-04-16 00:00:00' and created_time < '2013-04-30 23:59:59' and state='MA'" 
 
     if len(sys.argv) != 2:
         print("Usage:> python get_counterfactuals.py outfile.txt")
@@ -36,23 +31,32 @@ def main(argv):
 
     cnx = mysql.connector.connect(host='127.0.0.1', port=3306, user=username, db=db)
     cursor = cnx.cursor()
-    cursor.execute(sql_year)
+    cursor.execute(sql_after)
 
-    print('Retrieving counterfactuals...')
+    print('Rtrieving counterfactuals...')
 
-    count_before = 0
+    cf_total = 0.0
+    tweet_total = 0.0
+    reg = re.compile("(boston|marathon)", re.IGNORECASE);
     for row in cursor:
         message = row[0]
         tagged_message = counterfactualMethods.get_tagged_message(message, tagger)
         cf_form = counterfactualMethods.get_cf_form(tagged_message)
-        cf = 0 if cf_form == 0 else 1
 
-        if (cf == 1):
-            count_before = count_before + 1
+        if reg.search(message) != None:
+            if cf_form != 0:
+                cf_total = cf_total + 1
+        
+            tweet_total = tweet_total + 1
 
-    avg_five_day_cnt = 5.0 * count_before / 365
-    avg_five_day_msg_cnt = 5.0 * (limit_count * 10) / 365
-    print("Average cf count for five days: {} or {} percent".format(avg_five_day_cnt, avg_five_day_cnt / avg_five_day_msg_cnt))
+        
+        if tweet_total != 0:
+            print(tweet_total)    
+        
+        if cf_total != 0:
+            print("Percent Counterfactual: {}".format(cf_total/tweet_total)) 
+        
+
 
     '''
     cursor.execute(sql_after)
