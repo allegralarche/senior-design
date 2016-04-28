@@ -51,7 +51,7 @@ CFControllers.controller('MapCtrl', ['$scope',
 
 		$scope.getPercents = function() {
 			var timeOne = dateFormat($scope.timeOne, 'yyyy-mm-dd HH:MM:ss');
-			var timeOne = dateFormat($scope.timeTwo, 'yyyy-mm-dd HH:MM:ss');
+			var timeTwo = dateFormat($scope.timeTwo, 'yyyy-mm-dd HH:MM:ss');
 			var county = $scope.county();
 
 			$http({
