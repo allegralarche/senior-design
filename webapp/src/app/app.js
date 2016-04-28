@@ -2,7 +2,6 @@
 
 // Styles
 require("../style/global.css");
-require("../style/angularMaterial.css");
 require("bootstrap/dist/css/bootstrap.css");
 
 var angular = require("angular");

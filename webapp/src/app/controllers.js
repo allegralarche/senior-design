@@ -52,17 +52,9 @@ CFControllers.controller('MapCtrl', ['$scope', '$http',
 		};
 
 		$scope.getPercents = function() {
-
-			$scope.endDate = new Date(
-				$scope.endDate.getFullYear(),
-				$scope.endDate.getMonth(),
-				$scope.endDate.getDate() + 1);
-
-			console.log($scope.startDate);
-			console.log($scope.endDate);
-
-			var timeOne = dateFormat($scope.startDate, 'yyyy-mm-dd HH:MM:ss');
-			var timeTwo = dateFormat($scope.endDate, 'yyyy-mm-dd HH:MM:ss');
+			var timeOne = dateFormat($scope.timeOne, 'yyyy-mm-dd HH:MM:ss');
+			var timeTwo = dateFormat($scope.timeTwo, 'yyyy-mm-dd HH:MM:ss');
+			var county = $scope.county();
 
 			$http({
 				method: "POST",
