@@ -35,7 +35,7 @@ python getTaggedFile.py <input file> <output file>
 
 ### NLTK Tagset
 --------------------------------------------------------------------------
-
+```
 $: dollar
     $ -$ --$ A$ C$ HK$ M$ NZ$ S$ U.S.$ US$
 '': closing quotation mark
@@ -178,3 +178,4 @@ WRB: Wh-adverb
     how however whence whenever where whereby whereever wherein whereof why
 ``: opening quotation mark
     ` ``
+```
