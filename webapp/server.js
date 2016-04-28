@@ -58,6 +58,7 @@ app.post('/getPercents', function response(req, res) {
 			continue;
 		}
 
+		// Clean the input string
 		var latitude = line.split(",")[0];
 		var longitude = line.split(",")[1];
 
